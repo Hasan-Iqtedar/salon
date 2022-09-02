@@ -9,22 +9,36 @@
 
 .navigation-panel .options-container {
     display: flex;
-    margin-top: 80px;
+    margin-top: 70px;
+    /* width: 100%; */
     height: 60%;
     flex-direction: column;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .navigation-panel .options-container ul {
-    color: rgb(214, 213, 213);
+    padding: 0;
     list-style-type: none;
 }
 
 .navigation-panel .options-container ul li {
     margin-top: 15px;
+    /* border: 1px solid red; */
 }
 
-.navigation-panel .options-container ul li:hover {
+.navigation-panel .options-container ul li .link {
+    color: rgb(214, 213, 213);
+    text-decoration: none;
+}
+
+.navigation-panel .options-container ul li .link-active {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.navigation-panel .options-container ul li .link:hover {
     color: white;
     cursor: pointer;
 }
