@@ -3,10 +3,16 @@ import { createContext, useContext, useState } from "react";
 const AuthContext = createContext(null);
 
 export const AuthProvider = (props) => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(localStorage.user);
 
-  const login = (user) => setUser(user);
-  const logout = () => setUser(null);
+  const login = (user) => {
+    setUser(user);
+  };
+
+  const logout = () => {
+    localStorage.removeItem("user");
+    setUser(null);
+  };
 
   return (
     <AuthContext.Provider value={{ user, login, logout }}>

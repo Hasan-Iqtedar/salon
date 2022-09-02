@@ -23,6 +23,7 @@ const Login = (props) => {
   const loginUser = (e) => {
     if (email === "admin@gmail.com" && password === "admin") {
       login("admin");
+      localStorage.setItem("user", "admin");
       navigate("/", { replace: true });
       setErr(false);
     } else {
