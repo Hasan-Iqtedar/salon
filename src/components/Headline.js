@@ -2,9 +2,11 @@ import "../styles/headline.css";
 
 const Headline = (props) => {
   return (
-    <div className="headline">
+    <div className="headline" style={{...props.style}}>
       Welcome {props.text}
-      <p className="paraLine">{props.line}</p>
+      <p className="paraLine" style={props.lineStyle}>
+        {props.line}
+      </p>
     </div>
   );
 };
