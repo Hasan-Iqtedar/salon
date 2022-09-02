@@ -1,0 +1,50 @@
+.navigation-panel {
+    width: 230px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid gray;
+}
+
+.navigation-panel .options-container {
+    display: flex;
+    margin-top: 80px;
+    height: 60%;
+    flex-direction: column;
+    border: 1px solid red;
+}
+
+.navigation-panel .options-container ul {
+    color: rgb(214, 213, 213);
+    list-style-type: none;
+}
+
+.navigation-panel .options-container ul li {
+    margin-top: 15px;
+}
+
+.navigation-panel .options-container ul li:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.navigation-panel .sign-out-container {
+    display: flex;
+    margin-top: 40px;
+}
+
+.navigation-panel .sign-out-container .icon {
+    font-size: 24px;
+    color: var(--primaryColor)
+}
+
+.navigation-panel .sign-out-container .sign-out {
+    border: none;
+    color: white;
+    background-color: transparent;
+}
+
+.navigation-panel .sign-out-container .sign-out:hover {
+    color: rgb(229, 226, 226);
+}
