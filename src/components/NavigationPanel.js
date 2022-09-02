@@ -1,7 +1,8 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import { RiLogoutBoxRFill } from "react-icons/ri";
 import { useAuth } from "../contexts/auth";
 import Logo from "./Logo";
+import { navigationOptions } from "../constants/navigationOptions";
 import "../styles/navigationPanel.css";
 
 const NavigationPanel = (props) => {
@@ -18,16 +19,20 @@ const NavigationPanel = (props) => {
       <Logo />
       <div className="options-container">
         <ul>
-          <li>Dashboard</li>
-          <li>Pending Bookings</li>
-          <li>Upcomming Bookings</li>
-          <li>Locations</li>
-          <li>Categories</li>
-          <li>Stylists</li>
-          <li>Slots</li>
-          <li>History</li>
-          <li>Users</li>
-          <li>Settings</li>
+          {navigationOptions.map((option) => {
+            return (
+              <li>
+                <NavLink
+                  to={option.path}
+                  className={({ isActive }) =>
+                    isActive ? "link-active" : "link"
+                  }
+                >
+                  {option.name}
+                </NavLink>
+              </li>
+            );
+          })}
         </ul>
       </div>
       <div className="sign-out-container">
