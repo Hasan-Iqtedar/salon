@@ -1,0 +1,15 @@
+.login .container {
+    width: 350px;
+    height: 200px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+}
+  
+.login .passwordField {
+    width: 70%;
+}
