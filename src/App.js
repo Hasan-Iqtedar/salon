@@ -1,5 +1,5 @@
 import Dashboard from "./pages/Dashboard";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import PendingBookings from "./pages/PendingBookings";
 import UpcomingBookings from "./pages/UpcomingBookings";
 import NavigationPanel from "./components/NavigationPanel";
@@ -14,6 +14,7 @@ function App() {
       <Container>
         <Header />
         <Routes>
+          <Route path="/" element={<Navigate to="/dashboard" replace />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/pending-bookings" element={<PendingBookings />} />
           <Route path="/upcoming-bookings" element={<UpcomingBookings />} />
