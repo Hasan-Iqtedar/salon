@@ -1,7 +1,7 @@
 export const navigationOptions = [
   {
     name: "Dashboard",
-    path: "/",
+    path: "/dashboard",
   },
   {
     name: "Pending Bookings",
