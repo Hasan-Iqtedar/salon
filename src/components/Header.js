@@ -1,4 +1,5 @@
 import { IoIosNotifications } from "react-icons/io";
+import ProfilePicture from "./ProfilePicture";
 import Headline from "./Headline";
 import "../styles/header.css";
 
@@ -13,7 +14,7 @@ const Header = (props) => {
       />
       <div className="header-options">
         <IoIosNotifications className="icon" />
-        <div className="profile-picture"></div>
+        <ProfilePicture />
       </div>
     </div>
   );
