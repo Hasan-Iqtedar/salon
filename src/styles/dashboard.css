@@ -1,4 +1,5 @@
 .dashboard {
     display: flex;
-    border: 1px solid red;
+    flex-direction: column;
+    flex-grow: 100;
 }

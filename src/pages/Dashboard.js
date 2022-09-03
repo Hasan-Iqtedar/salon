@@ -1,22 +1,13 @@
-import NavigationPanel from "../components/NavigationPanel";
-import Container from "../components/Container";
+import Table from "../components/Table";
+import TableHeader from "../components/TableHeader";
+import { pendingBookings, upcomingBookings } from "../constants/data";
 import "../styles/dashboard.css";
-import Header from "../components/Header";
 
 const Dashboard = (props) => {
   return (
     <div className="dashboard">
-      <NavigationPanel />
-      <Container>
-        <Header/>
-      </Container>
-      {/* container 
-            -Header
-            -Table
-                --Table Header
-                --Table Content
-            -Footer
-      */}
+      <TableHeader title="Pending Bookings" />
+      <Table data={pendingBookings} />
     </div>
   );
 };
