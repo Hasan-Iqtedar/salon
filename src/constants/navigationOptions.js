@@ -8,8 +8,8 @@ export const navigationOptions = [
     path: "/pending-bookings",
   },
   {
-    name: "Upcomming Bookings",
-    path: "/upcomming-bookings",
+    name: "Upcoming Bookings",
+    path: "/upcoming-bookings",
   },
   {
     name: "Locations",
