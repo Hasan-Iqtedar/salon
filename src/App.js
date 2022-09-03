@@ -2,6 +2,7 @@ import Dashboard from "./pages/Dashboard";
 import { Route, Routes, Navigate } from "react-router-dom";
 import PendingBookings from "./pages/PendingBookings";
 import UpcomingBookings from "./pages/UpcomingBookings";
+import Locations from "./pages/Locations";
 import NavigationPanel from "./components/NavigationPanel";
 import Container from "./components/Container";
 import Header from "./components/Header";
@@ -18,7 +19,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/pending-bookings" element={<PendingBookings />} />
           <Route path="/upcoming-bookings" element={<UpcomingBookings />} />
-          <Route />
+          <Route path="/locations" element={<Locations />} />
         </Routes>
       </Container>
       {/* container 

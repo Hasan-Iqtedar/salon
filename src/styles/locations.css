@@ -1,0 +1,68 @@
+.locations {
+    display: flex;
+    height: 50%;
+    width: 55%;
+    margin-top: 20px;
+    flex-direction: column;
+    /* border: 1px solid red; */
+}
+
+.locations .location-header {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    /* border: 1px solid white; */
+}
+
+.locations .location-header h2 {
+    margin: 0;
+    font-weight: 400;
+    color: var(--primaryColor);
+}
+
+.locations .location-header button {
+    border: none;
+    color: white;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+.locations .location-header button:hover, .locations .location-item .actions button:hover {
+    color: rgb(219, 218, 218);
+}
+
+.locations .location-item {
+    height: 35px;
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+}
+
+.locations .location-item .address, .locations .location-item .actions {
+    width: 30%;
+    display: flex;
+    color: white;
+    font-weight: 300;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.locations .location-item .address .icon {
+    color: var(--primaryColor);
+    font-size: 24px;
+}
+
+.locations .location-item .actions {
+    width: 35%;
+}
+
+.locations .location-item .actions button {
+    border: none;
+    color: white;
+    font-weight: 300;
+    text-decoration: underline;
+    background-color: transparent;    
+}
