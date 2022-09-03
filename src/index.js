@@ -6,6 +6,7 @@ import RequireAuth from "./components/RequireAuth";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AuthProvider } from "./contexts/auth";
 import "./styles/index.css";
+import { GlobalProvider } from "./contexts/globalState";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,7 +17,9 @@ root.render(
           path="/*"
           element={
             <RequireAuth>
-              <App />
+              <GlobalProvider>
+                <App />
+              </GlobalProvider>
             </RequireAuth>
           }
         />
