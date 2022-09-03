@@ -1,6 +1,6 @@
 import Table from "../components/Table";
 import TableHeader from "../components/TableHeader";
-import { pendingBookings, upcomingBookings } from "../constants/data";
+import { pendingBookings } from "../constants/data";
 import "../styles/dashboard.css";
 
 const Dashboard = (props) => {
