@@ -4,14 +4,14 @@ import Footer from "../components/Footer";
 import { upcomingBookings } from "../constants/data";
 import "../styles/upcomingBookings.css";
 
-const PendingBookings = (props) => {
+const UpcomingBookings = (props) => {
   return (
     <div className="pending-bookings">
-      <TableHeader title="Pending Bookings" />
+      <TableHeader title="Upcoming Bookings" />
       <Table data={upcomingBookings} />
       <Footer />
     </div>
   );
 };
 
-export default PendingBookings;
+export default UpcomingBookings;
