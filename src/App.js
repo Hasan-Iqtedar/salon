@@ -1,9 +1,11 @@
-import Dashboard from "./pages/Dashboard";
 import { Route, Routes, Navigate } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import NavigationPanel from "./components/NavigationPanel";
 import PendingBookings from "./pages/PendingBookings";
 import UpcomingBookings from "./pages/UpcomingBookings";
 import Locations from "./pages/Locations";
-import NavigationPanel from "./components/NavigationPanel";
+import Stylists from "./pages/Stylists";
+import Categories from './pages/Categories.js'
 import Container from "./components/Container";
 import Header from "./components/Header";
 import "./styles/app.css";
@@ -20,6 +22,9 @@ function App() {
           <Route path="/pending-bookings" element={<PendingBookings />} />
           <Route path="/upcoming-bookings" element={<UpcomingBookings />} />
           <Route path="/locations" element={<Locations />} />
+          <Route path="/stylists" element={<Stylists />} />
+          <Route path="/categories" element={<Categories />} />
+
         </Routes>
       </Container>
       {/* container 
