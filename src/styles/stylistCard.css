@@ -1,0 +1,85 @@
+.dropdown {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(51, 50, 50);
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content div {
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: small;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}  
+
+.dropdown-content div:hover {
+    cursor: pointer;
+    background-color: rgb(37, 37, 37);
+}
+
+.dropdown-content div .icon {
+    margin-right: 10px;
+    color: var(--primaryColor);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.stylist-card, .add-card {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    flex-direction: column;
+    /* margin-top: 10px; */
+    /* margin-right: 10px; */
+    border: 1px solid var(--primaryColor);
+}
+
+.stylist-card .picture {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.stylist-card p, .add-card p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: small;
+    color: white;
+}
+
+.stylist-card .rating {
+    display: flex;
+}
+
+.stylist-card .rating .star {
+    font-size: 8px;
+    color: var(--primaryColor);
+}
+
+.add-card {
+    border: 2px dashed var(--primaryColor);
+}
+
+.add-card .icon {
+    font-size: 32px;
+    color: var(--primaryColor);
+}
