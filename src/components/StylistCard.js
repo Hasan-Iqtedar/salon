@@ -1,19 +1,9 @@
-import { useState } from "react";
-import {
-  IoStarSharp,
-  IoAddCircleOutline,
-  IoPencil,
-  IoInformationCircleOutline,
-} from "react-icons/io5";
+import { IoStarSharp, IoAddCircleOutline, IoPencil } from "react-icons/io5";
 import { FaTrash } from "react-icons/fa";
 import "../styles/stylistCard.css";
 
 const StylistCard = (props) => {
-  const { rating, picture, name } = props.item;
-  const [show, setShow] = useState(false);
-
-  const showMenu = () => setShow(true);
-  const hideMenu = () => setShow(false);
+  const { rating, picture, name, id } = props.item;
 
   const renderStars = () => {
     const data = [];
@@ -23,16 +13,9 @@ const StylistCard = (props) => {
     return data;
   };
 
-  const displayOptions = () => {
-    showMenu();
-  };
-
   return (
     <div className={!props.className ? "dropdown" : ""}>
-      <div
-        className={props.className ? props.className : "stylist-card"}
-        onClick={displayOptions}
-      >
+      <div className={props.className ? props.className : "stylist-card"}>
         {props.className ? (
           <IoAddCircleOutline className="icon" />
         ) : (
@@ -43,13 +26,10 @@ const StylistCard = (props) => {
         <div className="rating">{renderStars()}</div>
       </div>
       <div className="dropdown-content">
-        <div>
-          <IoPencil className="icon" /> Edit Details
+        <div onClick={() => props.showModal(id)}>
+          <IoPencil className="icon" /> Details
         </div>
-        <div>
-          <IoInformationCircleOutline className="icon" /> Show Details
-        </div>
-        <div>
+        <div onClick={() => props.deleteStylist(id)}>
           <FaTrash className="icon" /> Delete
         </div>
       </div>
