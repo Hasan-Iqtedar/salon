@@ -1,0 +1,67 @@
+.subcategory-item {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(82, 81, 81);
+    /* border: 1px solid blue; */
+}
+
+.subcategory-item .description-container {
+    width: 30%;
+    justify-content: left;
+}
+
+.subcategory-item .subcategory-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 12%;
+    border: 1px solid white;
+    margin-right: 15px;   
+}
+
+.subcategory-item .subcategory-description {
+    height: 100%;
+    /* width: 100px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.subcategory-item .subcategory-description span {
+    color: var(--primaryColor);
+    font-size: 18px;
+}
+
+.subcategory-item .subcategory-description div {
+    display: flex;
+    width: 120px;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    font-weight: 300;
+    font-size: small;
+    /* border: 1px solid red; */
+}
+
+.subcategory-item .subcategory-description div .circle {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-left: 5px;
+    background-color: var(--primaryColor);
+}
+
+.subcategory-buttons-container {
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.subcategory-buttons-container .icon {
+    color: var(--primaryColor);
+}
