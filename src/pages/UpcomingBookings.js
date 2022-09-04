@@ -6,8 +6,8 @@ import "../styles/upcomingBookings.css";
 
 const UpcomingBookings = (props) => {
   return (
-    <div className="pending-bookings">
-      <TableHeader title="Upcoming Bookings" />
+    <div className="upcoming-bookings">
+      <TableHeader default={true} title="Upcoming Bookings" />
       <Table data={upcomingBookings} />
       <Footer />
     </div>
