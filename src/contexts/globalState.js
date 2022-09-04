@@ -1,7 +1,7 @@
 import React, { createContext, useReducer } from "react";
 import combineReducers from "react-combine-reducers";
 import locationReducer from "./locationReducer";
-import stylistsReducer from "./stylistsReduces";
+import stylistsReducer from "./stylistsReducer";
 
 const initialStateLocations = {
   locations: [
