@@ -1,0 +1,14 @@
+.stylists {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 100;
+}
+
+.stylists .cards-container {
+    width: 85%;
+    display: grid;
+    row-gap: 15px;
+    column-gap: 15px;
+    grid-template-columns: repeat(8, 1fr);
+    /* border: 1px solid white; */
+}
