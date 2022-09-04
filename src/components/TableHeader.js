@@ -5,7 +5,7 @@ const TableHeader = (props) => {
     <div className="table-header">
       <h2>{props.title}</h2>
       <div className="container">
-        <button>Default</button>
+        {props.default ? <button>Default</button> : ""}
         <button>Location: All</button>
       </div>
     </div>
