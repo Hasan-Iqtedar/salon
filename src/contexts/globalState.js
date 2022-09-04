@@ -28,28 +28,6 @@ const initialStateStylists = {
   ],
 };
 
-// const initialState = {
-// locations: [
-//   { address: "Street abc, city abc" },
-//   { address: "Street abc, city abc" },
-//   { address: "Street abc, city abc" },
-// ],
-// stylists: [
-//   { id: "1", picture: "", name: "David", rating: "5" },
-//   { id: "2", picture: "", name: "John", rating: "4" },
-//   { id: "3", picture: "", name: "Joe", rating: "5" },
-//   { id: "4", picture: "", name: "David", rating: "5" },
-//   { id: "5", picture: "", name: "John", rating: "4" },
-//   { id: "6", picture: "", name: "Joe", rating: "5" },
-//   { id: "7", picture: "", name: "David", rating: "5" },
-//   { id: "8", picture: "", name: "John", rating: "4" },
-//   { id: "9", picture: "", name: "Joe", rating: "5" },
-//   { id: "10", picture: "", name: "David", rating: "5" },
-//   { id: "11", picture: "", name: "John", rating: "4" },
-//   { id: "12", picture: "", name: "Joe", rating: "5" },
-// ],
-// };
-
 export const GlobalContext = createContext();
 
 const [rootReducer, initialState] = combineReducers({
