@@ -11,6 +11,7 @@ import Header from "./components/Header";
 import Settings from "./pages/Settings";
 import "./styles/app.css";
 import Notifications from "./pages/Notifications";
+import Users from "./pages/Users";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/categories" element={<Categories />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/notifications" element={<Notifications />} />
+          <Route path="/users" element={<Users />} />
 
         </Routes>
       </Container>
