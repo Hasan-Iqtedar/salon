@@ -10,6 +10,7 @@ import Container from "./components/Container";
 import Header from "./components/Header";
 import Settings from "./pages/Settings";
 import "./styles/app.css";
+import Notifications from "./pages/Notifications";
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
           <Route path="/stylists" element={<Stylists />} />
           <Route path="/categories" element={<Categories />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/notifications" element={<Notifications />} />
+
         </Routes>
       </Container>
       {/* container 
