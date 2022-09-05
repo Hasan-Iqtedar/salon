@@ -1,8 +1,12 @@
-import {HiDotsHorizontal} from 'react-icons/hi';
+import { HiDotsHorizontal } from "react-icons/hi";
+import { IoPencil } from "react-icons/io5";
+import { FaTrash } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import ProfilePicture from "./ProfilePicture";
 import "../styles/table.css";
 
 const Table = (props) => {
+  const navigate = useNavigate();
   return (
     <div className="table">
       <table>
@@ -29,8 +33,26 @@ const Table = (props) => {
               <td>
                 <button className="accept">Accept</button>
                 <button className="decline">Decline</button>
-                <HiDotsHorizontal className='details' />
-                {/* <span className="details">...</span> */}
+                <div className="dropdown details">
+                  <HiDotsHorizontal />
+                  <div className="dropdown-content">
+                    <div>
+                      <IoPencil
+                        className="icon"
+                        onClick={() =>
+                          navigate("/booking-details", {
+                            replace: true,
+                            state: { id: item.id },
+                          })
+                        }
+                      />
+                      Details
+                    </div>
+                    <div>
+                      <FaTrash className="icon" /> Delete
+                    </div>
+                  </div>
+                </div>
               </td>
             </tr>
           );

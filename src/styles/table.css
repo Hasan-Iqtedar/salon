@@ -65,3 +65,8 @@
 .table tr:nth-child(even) {
     background-color: rgba(214, 212, 212, 0.05);
 }
+
+.table .dropdown {
+    width: auto;
+    height: auto;
+}

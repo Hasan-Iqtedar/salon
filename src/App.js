@@ -12,6 +12,7 @@ import Settings from "./pages/Settings";
 import "./styles/app.css";
 import Notifications from "./pages/Notifications";
 import Users from "./pages/Users";
+import BookingDetails from "./pages/BookingDetails";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/settings" element={<Settings />} />
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/users" element={<Users />} />
+          <Route path="/booking-details" element={<BookingDetails />} />
 
         </Routes>
       </Container>
