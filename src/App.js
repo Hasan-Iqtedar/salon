@@ -5,9 +5,10 @@ import PendingBookings from "./pages/PendingBookings";
 import UpcomingBookings from "./pages/UpcomingBookings";
 import Locations from "./pages/Locations";
 import Stylists from "./pages/Stylists";
-import Categories from './pages/Categories.js'
+import Categories from "./pages/Categories.js";
 import Container from "./components/Container";
 import Header from "./components/Header";
+import Settings from "./pages/Settings";
 import "./styles/app.css";
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
           <Route path="/locations" element={<Locations />} />
           <Route path="/stylists" element={<Stylists />} />
           <Route path="/categories" element={<Categories />} />
-
+          <Route path="/settings" element={<Settings />} />
         </Routes>
       </Container>
       {/* container 

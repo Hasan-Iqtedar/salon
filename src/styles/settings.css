@@ -1,0 +1,77 @@
+.settings {
+    display: flex;
+    flex-grow: 100;
+    width: 70%;
+    flex-direction: column;
+}
+
+.settings-title {
+    color: var(--primaryColor);
+    font-weight: 400;
+    margin-top: 0;
+    padding-bottom: 30px;
+    border-bottom: 1px solid  rgb(82, 81, 81);
+}
+
+.settings div h3 {
+    color: white;
+    font-weight: 400;
+    margin-left: 25px;
+    margin-bottom: 0;
+    padding-bottom: 30px;
+    border-bottom: 1px solid  rgb(82, 81, 81);
+}
+
+.settings-fields-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+    margin-right: 10px;
+}
+
+.settings-fields-container .field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(82, 81, 81);
+}
+
+.settings-fields-container .field .icon {
+    color: white;
+    font-size: 24px;
+}
+
+.settings-fields-container input {
+    background-color: transparent;
+    border: none;
+    height: 50px;
+    color: white;
+    width: 90%;
+}
+
+.settings-fields-container input:focus-visible {
+    outline: none;
+}
+
+.settings-fields-container .field p {
+    color: rgb(131, 129, 129);
+    font-weight: 300;
+    width: 90%;
+}
+
+.switch {
+    width: 25px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 40%;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid white;
+}
+.switch div {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
