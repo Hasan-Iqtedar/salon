@@ -13,6 +13,7 @@ import "./styles/app.css";
 import Notifications from "./pages/Notifications";
 import Users from "./pages/Users";
 import BookingDetails from "./pages/BookingDetails";
+import Slots from "./pages/Slots";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/users" element={<Users />} />
           <Route path="/booking-details" element={<BookingDetails />} />
+          <Route path="/slots" element={<Slots />} />
 
         </Routes>
       </Container>
