@@ -1,6 +1,7 @@
 import { IoStarSharp, IoAddCircleOutline, IoPencil } from "react-icons/io5";
 import { FaTrash } from "react-icons/fa";
 import "../styles/stylistCard.css";
+import ProfilePicture from "./ProfilePicture";
 
 const StylistCard = (props) => {
   const { rating, picture, name, id } = props.item;
@@ -19,7 +20,8 @@ const StylistCard = (props) => {
         {props.className ? (
           <IoAddCircleOutline className="icon" />
         ) : (
-          <div className="picture"></div>
+          // <div className="picture"></div>
+          <ProfilePicture imgStyle={{ width: "45px", height: "45px" }} />
         )}
 
         <p>{name}</p>

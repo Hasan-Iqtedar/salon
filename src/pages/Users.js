@@ -22,7 +22,7 @@ const Users = (props) => {
           <tr>
             <td>
               <div className="name">
-                <ProfilePicture style={{ width: "40px", height: "40px" }} />
+                <ProfilePicture imgStyle={{ width: "40px", height: "40px" }} />
                 {'David'}
               </div>
             </td>

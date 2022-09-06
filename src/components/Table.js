@@ -23,7 +23,9 @@ const Table = (props) => {
             <tr>
               <td>
                 <div className="name">
-                  <ProfilePicture style={{ width: "40px", height: "40px" }} />{" "}
+                  <ProfilePicture
+                    imgStyle={{ width: "40px", height: "40px" }}
+                  />
                   {item.name}
                 </div>
               </td>
@@ -36,16 +38,16 @@ const Table = (props) => {
                 <div className="dropdown details">
                   <HiDotsHorizontal />
                   <div className="dropdown-content">
-                    <div>
-                      <IoPencil
-                        className="icon"
-                        onClick={() =>
-                          navigate("/booking-details", {
-                            replace: true,
-                            state: { id: item.id },
-                          })
-                        }
-                      />
+                    <div
+                      onClick={() => {
+                        console.log("going");
+                        navigate("/booking-details", {
+                          replace: true,
+                          state: { id: item.id },
+                        });
+                      }}
+                    >
+                      <IoPencil className="icon" />
                       Details
                     </div>
                     <div>

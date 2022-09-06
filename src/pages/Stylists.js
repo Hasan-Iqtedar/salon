@@ -6,6 +6,7 @@ import TableHeader from "../components/TableHeader";
 import InputField from "../components/InputField";
 import Modal from "../components/Modal";
 import "../styles/stylists.css";
+import ProfilePicture from "../components/ProfilePicture";
 
 const Stylists = (props) => {
   const { stylists, updateStylist, deleteStylist } = useContext(GlobalContext);
@@ -30,7 +31,8 @@ const Stylists = (props) => {
     <div className="stylists">
       <Modal title="Details" show={show} hideModal={hideModal}>
         <div className="picture-container">
-          <div className="add-picture"></div>
+          {/* <div className="add-picture"></div> */}
+          <ProfilePicture imgStyle={{ width: "45px", height: "45px" }} />
           <span>Add picture</span>
         </div>
         <div className="input-fields-container">
