@@ -35,7 +35,7 @@
 
 .category-item .description-container .description {
     height: 100%;
-    width: 100px;
+    /* width: 100px; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

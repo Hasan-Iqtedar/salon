@@ -1,15 +1,18 @@
 import { IoAddCircleOutline, IoPencil } from "react-icons/io5";
 import { AiFillCaretDown } from "react-icons/ai";
 import { FaTrash } from "react-icons/fa";
-import "../styles/categoryItem.css";
+// import dummy_image from "../assets/dummy_image.jpeg";
 import SubCategoryItem from "./SubcategoryItem";
+import ProfilePicture from "../components/ProfilePicture";
+import "../styles/categoryItem.css";
 
 const CategoryItem = ({ item }) => {
   return (
     <div className="category-item">
       <div className="category">
         <div className="description-container">
-          <div className="category-picture"></div>
+          {/* <div className="category-picture"></div> */}
+          <ProfilePicture />
           <div className="description">
             <span>{item.name}</span>
             <div>
@@ -30,7 +33,6 @@ const CategoryItem = ({ item }) => {
       {item.subcategories.map((cat) => {
         return <SubCategoryItem item={cat} />;
       })}
-
     </div>
   );
 };

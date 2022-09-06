@@ -8,9 +8,13 @@
     /* border: 1px solid blue; */
 }
 
-.subcategory-item .description-container {
-    width: 30%;
+.subcategory-item .subdescription-container {
+    width: 40%;
+    display: flex;
     justify-content: left;
+    align-items: center;
+    margin-top: 2px;
+    /* border: 1px solid blue; */
 }
 
 .subcategory-item .subcategory-picture {
@@ -23,9 +27,10 @@
 
 .subcategory-item .subcategory-description {
     height: 100%;
-    /* width: 100px; */
+    /* width: 200px; */
     display: flex;
     flex-direction: column;
+    /* border: 1px solid red; */
     justify-content: space-evenly;
 }
 
@@ -36,7 +41,7 @@
 
 .subcategory-item .subcategory-description div {
     display: flex;
-    width: 120px;
+    /* width: 120px; */
     flex-direction: row;
     align-items: center;
     color: white;
