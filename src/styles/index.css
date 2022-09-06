@@ -1,12 +1,11 @@
 :root {
-  --primaryColor: rgb(244, 225, 148);
+  --primaryColor: #E6B970;
+  --secondaryColor: #121111;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Playfair Display';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(61, 60, 60);
