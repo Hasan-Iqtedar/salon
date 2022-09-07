@@ -1,6 +1,7 @@
 .category-item {
     /* height: 100px; */
-    width: 82%;
+    /* width: 82%; */
+    width: 850px;
     display: flex;
     margin-top: 10px;
     flex-direction: column;

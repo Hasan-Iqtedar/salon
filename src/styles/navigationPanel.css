@@ -6,12 +6,13 @@
     align-items: center;
     border-right: 1px solid gray;
     position: fixed;
+    font-size: small;
 }
 
 .navigation-panel .options-container {
     display: flex;
     margin-top: 50px;
-    /* width: 100%; */
+    width: 80%;
     height: 60%;
     flex-direction: column;
     /* border: 1px solid red; */
@@ -62,4 +63,11 @@
 
 .navigation-panel .sign-out-container .sign-out:hover {
     color: rgb(229, 226, 226);
+}
+
+@media (min-width: 700px) {
+    .navigation-panel {
+        font-size: medium;
+        width: 18%;
+    }
 }

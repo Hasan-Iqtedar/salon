@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { IoIosNotifications } from "react-icons/io";
 import ProfilePicture from "./ProfilePicture";
@@ -6,6 +7,9 @@ import "../styles/header.css";
 
 const Header = (props) => {
   const navigate = useNavigate();
+  const [color, setColor] = useState(false);
+
+  const toggleColor = () => setColor(color ? false : true);
 
   return (
     <div className="header">
@@ -17,8 +21,11 @@ const Header = (props) => {
       />
       <div className="header-options">
         <IoIosNotifications
-          className="icon"
-          onClick={() => navigate("/notifications", { replace: true })}
+          className={color ? "icon white" : "icon gold"}
+          onClick={() => {
+            toggleColor();
+            navigate("/notifications", { replace: true });
+          }}
         />
         <ProfilePicture />
       </div>

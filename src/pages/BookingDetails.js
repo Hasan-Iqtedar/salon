@@ -25,7 +25,7 @@ const BookingDetails = (props) => {
           Stylist
           <div className="card">
             <ProfilePicture
-              style={{ width: "35px", height: "35px", marginRight: "10px" }}
+              style={{ width: "35px", height: "35px", marginRight: "20px" }}
             />
             Alia
           </div>

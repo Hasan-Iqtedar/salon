@@ -1,5 +1,6 @@
 .booking-details {
     width: 80%;
+    overflow: scroll;
 }
 
 .booking-details h2 {
@@ -9,7 +10,8 @@
 }
 
 .booking-details .details {
-    width: 80%;
+    /* width: 80%; */
+    width: 500px;
     display: grid;
     row-gap: 25px;
     padding-bottom: 20px;
@@ -68,10 +70,6 @@
 
 .booking-details .total .item {
     margin-top: 5px;
-}
-
-.btn-container {
-
 }
 
 .booking-details button {

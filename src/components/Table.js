@@ -33,7 +33,7 @@ const Table = (props) => {
               <td>{item.time}</td>
               <td>{item.stylist}</td>
               <td>
-                <button className="accept">Accept</button>
+                <button className="accept">Approve</button>
                 <button className="decline">Decline</button>
                 <div className="dropdown details">
                   <HiDotsHorizontal />

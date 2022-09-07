@@ -17,8 +17,15 @@
     margin-left: auto;
 }
 
-.header .header-options .icon {
+.header .header-options .white {
+    color: white;
+}
+
+.header .header-options .gold {
     color: var(--primaryColor);
+}
+
+.header .header-options .icon {
     font-size: 32px;
 }
 

@@ -7,8 +7,9 @@ import "../styles/dashboard.css";
 const Dashboard = (props) => {
   return (
     <div className="dashboard">
-      <TableHeader title="Pending Bookings" />
+      <TableHeader title="Pending Approvals" />
       <Table data={pendingBookings} />
+      <TableHeader title="Upcoming Bookings" />
       <Table data={upcomingBookings} />
     </div>
   );
