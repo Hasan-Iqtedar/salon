@@ -1,4 +1,4 @@
-import { IoStarSharp, IoAddCircleOutline, IoPencil } from "react-icons/io5";
+import { IoStarSharp, IoAddCircleOutline, IoPencil, IoInformationCircleOutline } from "react-icons/io5";
 import { FaTrash } from "react-icons/fa";
 import "../styles/stylistCard.css";
 import ProfilePicture from "./ProfilePicture";
@@ -20,7 +20,6 @@ const StylistCard = (props) => {
         {props.className ? (
           <IoAddCircleOutline className="icon" />
         ) : (
-          // <div className="picture"></div>
           <ProfilePicture imgStyle={{ width: "45px", height: "45px" }} />
         )}
 
@@ -29,7 +28,10 @@ const StylistCard = (props) => {
       </div>
       <div className="dropdown-content">
         <div onClick={() => props.showModal(id)}>
-          <IoPencil className="icon" /> Details
+          <IoPencil className="icon" /> Edit Details
+        </div>
+        <div onClick={() => props.showModal(id)}>
+          <IoInformationCircleOutline className="icon" /> Show Details
         </div>
         <div onClick={() => props.deleteStylist(id)}>
           <FaTrash className="icon" /> Delete
