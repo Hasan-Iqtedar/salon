@@ -13,7 +13,7 @@ const InputField = (props) => {
         onChange={props.changeHandler}
         style={props.fieldStyle}
       ></input>
-      {props.iconSeePassword ? <props.iconSeePassword className="icon" /> : ""}
+      {props.icon2 ? <props.icon2 className="icon" /> : ""}
     </div>
   );
 };

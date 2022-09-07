@@ -49,7 +49,7 @@ const Login = (props) => {
         />
         <InputField
           icon={GoEllipsis}
-          iconSeePassword={IoIosEyeOff}
+          icon2={IoIosEyeOff}
           name="password"
           type="password"
           placeholder="password"

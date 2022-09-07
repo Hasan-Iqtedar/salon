@@ -11,7 +11,7 @@ const Modal = (props) => {
         e.target.classList[0] === "modal" ? props.hideModal() : null
       }
     >
-      <div className="modal-content">
+      <div className="modal-content" style={props.contentStyle}>
         <div className="modal-header">
           <span>{props.title}</span>
           <IoCloseCircleSharp onClick={props.hideModal} className="icon" />
