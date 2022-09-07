@@ -23,7 +23,11 @@
     /* border: 1px solid red; */
 }
 
-.table-header button {
+.table-header .icon {
+    font-size: 8px;
+}
+
+.table-header button, .table-header .location {
     width: 60px;
     height: 25px;
     border: none;
@@ -32,17 +36,34 @@
     background-color: var(--primaryColor);
 }
 
+.table-header .location {
+    width: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 10px;
+}
+
 @media (min-width: 700px) {
 
     .table-header .container {
         width: 30%;
     }
 
-    .table-header button {
+    .table-header .icon {
+        font-size: 16px;
+    }
+
+    .table-header button, .table-header .location {
         /* font-size: medium; */
         width: 80px;
         height: 30px;  
         font-size: 12px;  
+    }
+
+    .table-header .location {
+        width: 120px;
     }
 }
 

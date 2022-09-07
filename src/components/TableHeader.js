@@ -1,3 +1,4 @@
+import { HiLocationMarker } from "react-icons/hi";
 import "../styles/tableHeader.css";
 
 const TableHeader = (props) => {
@@ -6,7 +7,9 @@ const TableHeader = (props) => {
       <h2>{props.title}</h2>
       <div className="container">
         {props.default ? <button>Default</button> : ""}
-        <button>Location: All</button>
+        <div className="location">
+          <HiLocationMarker className="icon" /> Location: All
+        </div>
       </div>
     </div>
   );
