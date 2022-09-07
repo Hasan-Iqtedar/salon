@@ -5,7 +5,7 @@
 
 .dropdown-menu .title {
     padding: 10px;
-    width: 300px;
+    width: 150px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     color: white;
@@ -43,4 +43,16 @@
 
 .dropdown-menu:hover .dropdown-menu-content {
     display: block;
+}
+
+@media (min-width: 800px) {
+    .dropdown-menu .title {
+        width: 200px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .dropdown-menu .title {
+        width: 270px;
+    }
 }
