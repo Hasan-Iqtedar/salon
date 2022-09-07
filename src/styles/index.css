@@ -8,7 +8,7 @@ body {
   font-family: 'Playfair Display';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(61, 60, 60);
+  background-color: var(--secondaryColor);
 }
 
 code {
