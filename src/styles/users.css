@@ -1,5 +1,6 @@
 .users {
     width: 80%;
+    /* min-height: 400px; */
     /* border: 1px solid red; */
 }
 
@@ -39,6 +40,19 @@
 
 .search-bar input:focus-visible {
     outline: none;
+}
+
+.users .dropdown .dropdown-content {
+    margin-left: -180px;
+    width: 200px;
+}
+
+.users .table {
+    min-height: 400px;
+}
+
+.users table td{
+    width: 50px;
 }
 
 .users .table th {

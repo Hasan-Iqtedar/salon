@@ -75,3 +75,7 @@
     width: auto;
     height: auto;
 }
+
+.table .dropdown .dropdown-content {
+    margin-left: -140px;
+}

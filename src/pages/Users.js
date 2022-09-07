@@ -1,4 +1,6 @@
-import { IoSearchOutline } from "react-icons/io5";
+import { HiDotsHorizontal } from "react-icons/hi";
+import { IoSearchOutline, IoInformationCircleOutline } from "react-icons/io5";
+import { FaTrash } from "react-icons/fa";
 import ProfilePicture from "../components/ProfilePicture";
 import "../styles/users.css";
 import "../styles/table.css";
@@ -23,12 +25,27 @@ const Users = (props) => {
             <td>
               <div className="name">
                 <ProfilePicture imgStyle={{ width: "40px", height: "40px" }} />
-                {'David'}
+                {"David"}
               </div>
             </td>
-            <td>{'david@gmail.com'}</td>
-            <td>{'12345678910'}</td>
-            <td> ... </td>
+            <td>{"david@gmail.com"}</td>
+            <td>{"12345678910"}</td>
+            <td>
+              {" "}
+              <div className="dropdown details">
+                <HiDotsHorizontal />
+                <div className="dropdown-content">
+                  <div>
+                    <FaTrash className="icon" /> Delete
+                  </div>
+                  <div>
+                    <IoInformationCircleOutline className="icon" />
+                    Additional Options
+                  </div>
+
+                </div>
+              </div>{" "}
+            </td>
           </tr>
         </table>
       </div>
