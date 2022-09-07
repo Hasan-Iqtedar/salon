@@ -1,0 +1,6 @@
+.slots .menus-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    /* border: 1px solid red; */
+}
