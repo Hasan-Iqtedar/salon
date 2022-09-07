@@ -6,7 +6,7 @@ import SubCategoryItem from "./SubcategoryItem";
 import ProfilePicture from "../components/ProfilePicture";
 import "../styles/categoryItem.css";
 
-const CategoryItem = ({ item }) => {
+const CategoryItem = ({ item, showModal }) => {
   return (
     <div className="category-item">
       <div className="category">
@@ -22,7 +22,11 @@ const CategoryItem = ({ item }) => {
         </div>
         <div className="buttons-container">
           <div className="add-btn">
-            Add subcategory <IoAddCircleOutline className="icon" />
+            Add subcategory
+            <IoAddCircleOutline
+              className="icon"
+              onClick={() => showModal(item.id)}
+            />
           </div>
           <FaTrash className="icon" />
           <IoPencil className="icon" />

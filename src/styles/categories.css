@@ -3,3 +3,26 @@
     flex-direction: column;
     overflow: scroll;
 }
+
+.categories .picture-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    color: white;
+}
+
+.categories .add-category-btn {
+    width: fit-content;
+    padding: 10px 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 7px;
+    color: var(--primaryColor);
+    border: 2px dashed var(--primaryColor);
+}
+
+.categories .add-category-btn:hover {
+    cursor: default;
+    /* background-color: var(--secondaryColor);     */
+}
