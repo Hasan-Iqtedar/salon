@@ -5,8 +5,9 @@ import StylistCard from "../components/StylistCard";
 import TableHeader from "../components/TableHeader";
 import InputField from "../components/InputField";
 import Modal from "../components/Modal";
-import "../styles/stylists.css";
 import ProfilePicture from "../components/ProfilePicture";
+import "../styles/stylists.css";
+
 
 const Stylists = (props) => {
   const { stylists, updateStylist, deleteStylist } = useContext(GlobalContext);
