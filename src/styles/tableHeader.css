@@ -23,6 +23,12 @@
     /* border: 1px solid red; */
 }
 
+.table-header .container img {
+    width: 18.35px;
+    height: 13px;
+    margin-left: 8px;
+}
+
 .table-header .icon {
     font-size: 8px;
 }
@@ -67,7 +73,8 @@
     }
 
     .table-header .location {
-        width: 150px;
+        width: 120px;
+        /* font-size: 8px; */
     }
 }
 
