@@ -24,7 +24,7 @@ const Table = (props) => {
               <td>
                 <div className="name">
                   <ProfilePicture
-                    imgStyle={{ width: "40px", height: "40px" }}
+                    imgStyle={{ width: "50px", height: "50px", marginRight: '5px' }}
                   />
                   {item.name}
                 </div>

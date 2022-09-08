@@ -10,10 +10,10 @@
 }
 
 .table th {
-    color: rgb(214, 213, 213);
+    color: rgba(255, 255, 255, 0.5);
     font-weight: 400;
     font-size: small;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #2E2E2E;
 }
 
 .table table, th {
@@ -23,6 +23,7 @@
 .table table th {
     height: 40px;
     text-align: left;
+    padding: 20px 16px;
 }
 
 .table table td {
@@ -30,6 +31,7 @@
     color: white;
     font-size: small;
     /* text-align: center; */
+    padding: 20px 16px;
 }
 
 .table table td button {
@@ -41,11 +43,12 @@
 }
 
 .table table td .name {
-    width: 135px;
+    width: 145px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: var(--primaryColor);
+    /* border: 1px solid red; */
 }
 
 .table table td .accept {
@@ -68,7 +71,7 @@
 }
 
 .table tr:nth-child(even) {
-    background-color: rgba(214, 212, 212, 0.05);
+    background-color: #2E2E2E;
 }
 
 .table .dropdown {
