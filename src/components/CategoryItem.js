@@ -12,7 +12,7 @@ const CategoryItem = ({ item, showModal }) => {
       <div className="category">
         <div className="description-container">
           {/* <div className="category-picture"></div> */}
-          <ProfilePicture />
+          <ProfilePicture imgStyle={{ width: "42px", height: "42px", borderRadius: '6px' }} />
           <div className="description">
             <span>{item.name}</span>
             <div>

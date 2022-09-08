@@ -8,7 +8,14 @@ const SubCategoryItem = ({ item }) => {
     <div className="subcategory-item">
       <div className="subdescription-container">
         {/* <div className="subcategory-picture"></div> */}
-        <ProfilePicture imgStyle={{ width: "40px", height: "40px", marginRight: '15px' }} />
+        <ProfilePicture
+          imgStyle={{
+            width: "29px",
+            height: "29px",
+            marginRight: "15px",
+            borderRadius: "6px",
+          }}
+        />
         <div className="subcategory-description">
           <span>{item.name}</span>
           <div>
