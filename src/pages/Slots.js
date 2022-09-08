@@ -18,7 +18,7 @@ const Slots = (props) => {
 
   return (
     <div className="slots">
-      <TableHeader title="Slots Allocation" />
+      <TableHeader title="Slots Allocation" default={true} />
       <div className="menus-container">
         <DropdownMenu title="Select Timings">
           {options.map((item) => {

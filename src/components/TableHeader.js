@@ -9,9 +9,15 @@ const TableHeader = (props) => {
     <div className="table-header">
       <h2>{props.title}</h2>
 
-      <div className="container" >
-        <div className="center-container" style={{width: '100%'}} >
-          {props.default ? <button>Default</button> : ""}
+      <div className="container">
+        <div className="center-container" style={{ width: "100%" }}>
+          {props.default ? (
+            <div className="location">
+              Default <AiFillCaretDown className="icon small" />
+            </div>
+          ) : (
+            ""
+          )}
           <div className="location">
             <HiLocationMarker className="icon" /> Location: All
             <AiFillCaretDown className="icon small" />
