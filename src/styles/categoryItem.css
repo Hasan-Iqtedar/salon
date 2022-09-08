@@ -19,7 +19,7 @@
 
 .category-item .description-container {
     height: 70px;
-    width: 170px;
+    width: 150px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
