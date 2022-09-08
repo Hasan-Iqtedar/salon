@@ -5,8 +5,8 @@ const Footer = (props) => {
   return (
     <div className="footer">
       <div>
-        Page 1 of 2 <IoIosArrowBack className="icon" /> 1
-        <IoIosArrowForward className="icon" />
+        Page 1 of 2 <IoIosArrowBack className="icon inactive" /> 1
+        <IoIosArrowForward className="icon active" />
       </div>
     </div>
   );

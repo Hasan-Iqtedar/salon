@@ -3,15 +3,24 @@
     margin-top: auto;
     color: white;
     /* border: 1px solid red; */
+    font-size: 16px;
 }
 
 .footer div {
     float: right;
     display: flex;
     align-items: center;
-    margin-right: 80px;
+    margin-right: 190px;
 }
 
 .footer div .icon {
-    font-size: 24px;
+    font-size: 16px;
+}
+
+.footer div .inactive {
+    color: rgba(230, 185, 112, 0.3);
+}
+
+.footer div .active {
+    color: var(--primaryColor);
 }
