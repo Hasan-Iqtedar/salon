@@ -60,7 +60,7 @@ const Categories = (props) => {
       </Modal>
 
       <Modal
-        title="Sub Category Details"
+        title="Category Details"
         show={showCatModal}
         hideModal={hideCatModal}
       >
