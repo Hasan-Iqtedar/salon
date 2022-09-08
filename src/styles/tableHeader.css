@@ -27,6 +27,10 @@
     font-size: 8px;
 }
 
+.table-header .icon .small {
+    font-size: 8px;
+}
+
 .table-header button, .table-header .location {
     width: 60px;
     height: 25px;
@@ -52,7 +56,7 @@
     }
 
     .table-header .icon {
-        font-size: 16px;
+        font-size: 11px;
     }
 
     .table-header button, .table-header .location {
@@ -63,7 +67,7 @@
     }
 
     .table-header .location {
-        width: 120px;
+        width: 150px;
     }
 }
 
@@ -73,10 +77,15 @@
         width: 30%;
     }
 
+    .table-header .icon {
+        font-size: 11px;
+    }
+
     .table-header button {
         /* font-size: medium; */
         width: 120px;
         height: 30px;  
         font-size: 12px;  
     }
+
 }

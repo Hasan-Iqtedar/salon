@@ -1,4 +1,6 @@
 import { HiLocationMarker } from "react-icons/hi";
+import { AiFillCaretDown } from "react-icons/ai";
+
 import "../styles/tableHeader.css";
 
 const TableHeader = (props) => {
@@ -9,6 +11,7 @@ const TableHeader = (props) => {
         {props.default ? <button>Default</button> : ""}
         <div className="location">
           <HiLocationMarker className="icon" /> Location: All
+          <AiFillCaretDown className="icon small" />
         </div>
       </div>
     </div>
