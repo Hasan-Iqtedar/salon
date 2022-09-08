@@ -18,7 +18,7 @@
 
 .locations .location-header h2 {
     margin: 0;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--primaryColor);
     font-size: 12px
 }
@@ -40,7 +40,7 @@
     display: flex;
     margin-bottom: 10px;
     justify-content: space-between;
-    border-bottom: 1px solid gray;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.28);
 }
 
 .locations .location-item .address, .locations .location-item .actions {
@@ -60,6 +60,7 @@
 
 .locations .location-item .actions {
     width: 35%;
+    /* border: 1px solid red; */
 }
 
 .locations .location-item .actions button {
@@ -79,7 +80,7 @@
     }
 
     .locations .location-item .actions button {
-        font-size: medium;
+        font-size: 14px;
     }
 
     .locations .location-header h2 {
