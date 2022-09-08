@@ -1,3 +1,4 @@
+import { IoStarSharp } from "react-icons/io5";
 import ProfilePicture from "../components/ProfilePicture";
 import "../styles/bookingDetails.css";
 
@@ -27,7 +28,22 @@ const BookingDetails = (props) => {
             <ProfilePicture
               style={{ width: "35px", height: "35px", marginRight: "20px" }}
             />
-            Alia
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                fontSize: "16px",
+              }}
+            >
+              Alia
+              <div>
+                <IoStarSharp className="icon" />
+                <IoStarSharp className="icon" />
+                <IoStarSharp className="icon" />
+                <IoStarSharp className="icon" />
+                <IoStarSharp className="icon" />
+              </div>
+            </div>
           </div>
         </div>
         <div className="cell">
@@ -40,25 +56,25 @@ const BookingDetails = (props) => {
       <div className="services">
         Services
         <div>
-            <div className="service-item">
-                <span>Manicure</span>
-                <span>$50</span>
-            </div>
-            <div className="service-item">
-                <span>Hair cut</span>
-                <span>$50</span>
-            </div>
+          <div className="service-item">
+            <span>Manicure</span>
+            <span style={{ fontWeight: "700" }}>$50</span>
+          </div>
+          <div className="service-item">
+            <span>Hair cut</span>
+            <span style={{ fontWeight: "700" }}>$50</span>
+          </div>
         </div>
       </div>
       <div className="total">
         Total Payment
         <div className="item">
-            <span>Total</span>
-            <span>$100</span>
+          <span>Total</span>
+          <span style={{ fontWeight: "700" }}>$100</span>
         </div>
       </div>
       <button>Reject</button>
-      <button className="approve" >Approve</button>
+      <button className="approve">Approve</button>
     </div>
   );
 };

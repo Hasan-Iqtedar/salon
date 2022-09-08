@@ -11,7 +11,7 @@
 
 .booking-details .details {
     /* width: 80%; */
-    width: 500px;
+    width: 550px;
     display: grid;
     row-gap: 25px;
     padding-bottom: 20px;
@@ -23,6 +23,12 @@
     display: flex;
     color: var(--primaryColor);
     flex-direction: column;
+    font-size: 18px;
+    /* border: 1px solid red;; */
+}
+
+.details .cell span {
+    font-size: 16px;
 }
 
 .cell span, .cell .card {
@@ -36,6 +42,11 @@
     grid-column-end: 4;
 }
 
+#stylist .icon {
+    font-size: 10px;
+    color: var(--primaryColor);
+}
+
 .cell .card {
     display: flex;
 }
@@ -43,7 +54,7 @@
 .booking-details .services {
     color: var(--primaryColor);
     margin-top: 20px;
-    width: 80%;
+    width: 550px;
     padding-bottom: 20px;
     border-bottom: 2px dashed rgba(82, 81, 81);
 }
@@ -56,7 +67,8 @@
 }
 
 .booking-details .total {
-    width: 80%;
+    width: 550px;
+    margin-top: 20px;
     color: var(--primaryColor);
 }
 
@@ -70,16 +82,18 @@
 
 .booking-details .total .item {
     margin-top: 5px;
+    width: 250px;
 }
 
 .booking-details button {
     margin-left: 10px;
     margin-top: 50px;
     margin-bottom: 100px;
-    width: 100px;
-    height: 30px;
+    width: 174px;
+    height: 54px;
     border-radius: 10px;
     border: none;
+    font-size: 16px;
 }
 
 .booking-details .approve {
