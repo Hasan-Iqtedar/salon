@@ -22,15 +22,36 @@ const NavigationPanel = (props) => {
         <ul>
           {navigationOptions.map((option) => {
             return (
-              <li>
+              <li className="">
                 <NavLink
                   to={option.path}
                   className={({ isActive }) =>
-                    isActive ? "link-active" : "link"
+                    isActive
+                      ? "link-active center-container"
+                      : "link center-container"
                   }
-                >
-                  {option.name}
-                </NavLink>
+                  children={({ isActive }) => {
+                    if (isActive) {
+                      return (
+                        <>
+                          <div className="active-mark active"></div>
+                          <span style={{ marginLeft: "50px" }}>
+                            {option.name}
+                          </span>
+                        </>
+                      );
+                    } else {
+                      return (
+                        <>
+                          <div className="active-mark inactive"></div>
+                          <span style={{ marginLeft: "50px" }}>
+                            {option.name}
+                          </span>
+                        </>
+                      );
+                    }
+                  }}
+                ></NavLink>
               </li>
             );
           })}

@@ -1,5 +1,13 @@
+.login {
+    /* height: 100%; */
+    /* margin-top: 50%; */
+    /* margin-bottom: 50%; */
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+
 .login .container {
-    width: 350px;
+    width: 400px;
     height: 150px;
     margin: auto;
     margin-top: 30px;
@@ -14,7 +22,7 @@
 }
 
 .login .button-container {
-    width: 350px;
+    width: 400px;
     height: 100px;
     margin: auto;
     display: flex;
@@ -24,8 +32,16 @@
     margin-top: 40px;
 }
 
+.login .forgot-password {
+    color: gray;
+    font-weight: 400;
+    font-size: 15px;
+    width: 80%;
+    text-align: right;
+}
+
 .login .button-container button {
-    width: 70%;
+    width: 80%;
     height: 45%;
     border: none;
     border-radius: 5px;
@@ -35,7 +51,8 @@
     margin: auto;
     margin-top: 10px;
     width: fit-content;
-    font-size: x-small;
+    font-size: 14px;
+    font-weight: 400;
     color: var(--primaryColor);
 }
 

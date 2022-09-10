@@ -6,11 +6,11 @@ import "../styles/tableHeader.css";
 
 const TableHeader = (props) => {
   return (
-    <div className="table-header">
+    <div className="table-header" style={props.style}>
       <h2>{props.title}</h2>
 
       <div className="container">
-        <div className="center-container" style={{ width: "100%" }}>
+        <div className="center-container" style={{ width: "100%", justifyContent: 'right' }}>
           {props.default ? (
             <div className="location">
               Default <AiFillCaretDown className="icon small" />
@@ -18,11 +18,13 @@ const TableHeader = (props) => {
           ) : (
             ""
           )}
-          <div className="location">
-            <HiLocationMarker className="icon" /> Location: All
-            <AiFillCaretDown className="icon small" />
+          <div className="center-container">
+            <div className="location">
+              <HiLocationMarker className="icon" /> Location: All
+              <AiFillCaretDown className="icon small" />
+            </div>
+            <img src={filterImage} alt=""></img>
           </div>
-          <img src={filterImage} alt=""></img>
         </div>
       </div>
     </div>

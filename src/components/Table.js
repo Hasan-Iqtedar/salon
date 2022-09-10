@@ -10,7 +10,7 @@ const Table = (props) => {
   return (
     <div className="table">
       <table>
-        <tr>
+        <tr style={{backgroundColor: 'transparent'}} >
           <th>Name</th>
           <th>Service</th>
           <th>Time</th>

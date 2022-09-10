@@ -12,7 +12,9 @@ const CategoryItem = ({ item, showModal }) => {
       <div className="category">
         <div className="description-container">
           {/* <div className="category-picture"></div> */}
-          <ProfilePicture imgStyle={{ width: "42px", height: "42px", borderRadius: '6px' }} />
+          <ProfilePicture
+            imgStyle={{ width: "42px", height: "42px", borderRadius: "6px" }}
+          />
           <div className="description">
             <span>{item.name}</span>
             <div>
@@ -34,8 +36,12 @@ const CategoryItem = ({ item, showModal }) => {
         </div>
       </div>
 
-      {item.subcategories.map((cat) => {
-        return <SubCategoryItem item={cat} />;
+      {item.subcategories.map((cat, index) => {
+        if (index === item.subcategories.length - 1) {
+          return <SubCategoryItem item={cat} style={{ borderBottom: 'none' }} />;
+        } else {
+          return <SubCategoryItem item={cat} />;
+        }
       })}
     </div>
   );

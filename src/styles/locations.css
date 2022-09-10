@@ -12,7 +12,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: 27px;
     /* border: 1px solid white; */
 }
 
@@ -28,7 +28,8 @@
     color: white;
     text-decoration: underline;
     background-color: transparent;
-    font-size: 10px
+    font-size: 10px;
+    font-weight: 400;
 }
 
 .locations .location-header button:hover, .locations .location-item .actions button:hover {
@@ -38,6 +39,7 @@
 .locations .location-item {
     height: 35px;
     display: flex;
+    padding: 10px 0 10px 0;
     margin-bottom: 10px;
     justify-content: space-between;
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.28);
@@ -50,12 +52,17 @@
     color: white;
     font-weight: 300;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+}
+
+.locations .location-item .actions {
+    justify-content: flex-end;
 }
 
 .locations .location-item .address .icon {
     color: var(--primaryColor);
     font-size: 24px;
+    margin-right: 6px;
 }
 
 .locations .location-item .actions {
@@ -72,7 +79,7 @@
     font-size: 10px;  
 }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
 
     .locations .location-item .address {
         width: 35%;
@@ -84,11 +91,15 @@
     }
 
     .locations .location-header h2 {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .locations .location-header button {
-        font-size: medium;
+        font-size: 14px;
     }   
+
+    .locations .location-item .address .icon {
+        margin-right: 26px;
+    }
 
 }

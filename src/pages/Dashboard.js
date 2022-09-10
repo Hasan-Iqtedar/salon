@@ -9,6 +9,7 @@ const Dashboard = (props) => {
     <div className="dashboard">
       <TableHeader title="Pending Approvals" />
       <Table data={pendingBookings} />
+      {/* <span style={{color: 'white', border: '1px solid red', textAlign: 'right', width: '90%'}} >View more</span> */}
       <TableHeader title="Upcoming Bookings" />
       <Table data={upcomingBookings} />
     </div>

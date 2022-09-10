@@ -1,6 +1,13 @@
 .booking-details {
     width: 80%;
     overflow: scroll;
+    /* border: 1px solid red; */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; 
+}
+
+.booking-details::-webkit-scrollbar {
+    display: none;
 }
 
 .booking-details h2 {
@@ -11,12 +18,13 @@
 
 .booking-details .details {
     /* width: 80%; */
-    width: 550px;
+    width: 800px;
     display: grid;
     row-gap: 25px;
     padding-bottom: 20px;
     border-bottom: 2px dashed rgba(82, 81, 81);
     grid-template-columns: repeat(4, 1fr);
+    /* border: 1px solid blue; */
 }
 
 .details .cell {
@@ -54,7 +62,7 @@
 .booking-details .services {
     color: var(--primaryColor);
     margin-top: 20px;
-    width: 550px;
+    width: 800px;
     padding-bottom: 20px;
     border-bottom: 2px dashed rgba(82, 81, 81);
 }
@@ -102,4 +110,14 @@
 
 .booking-details .approve:hover {
     background-color:  rgb(228, 210, 140);
+}
+
+@media (min-width: 800px) {
+    .booking-details .details {
+        width: 80%;
+    }
+    
+    .booking-details .services {
+        width: 80%;
+    }
 }

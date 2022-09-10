@@ -57,6 +57,7 @@ const Login = (props) => {
           changeHandler={updatePassword}
           fieldStyle={{ width: "70%" }}
         />
+        <span className="forgot-password">Forget Pasword?</span>
       </div>
       {err ? <p className="error">Invalid Credentials!</p> : ""}
 

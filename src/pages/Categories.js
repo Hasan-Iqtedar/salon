@@ -33,7 +33,7 @@ const Categories = (props) => {
         title="Sub Category Details"
         show={showSubModal}
         hideModal={hideSubModal}
-        contentStyle={{ height: "350px" }}
+        // contentStyle={{ height: "350px" }}
       >
         <div className="picture-container">
           <ProfilePicture imgStyle={{ width: "45px", height: "45px" }} />
@@ -47,9 +47,10 @@ const Categories = (props) => {
             changeHandler={updateName}
           />
           <InputField
-            fieldStyle={{ height: "30px" }}
+            fieldStyle={{ height: "30px", width: '70%' }}
             placeholder="Braided"
-            // icon2={AiFillCaretDown}
+            icon2={AiFillCaretDown}
+            icon2style={{fontSize: '8px'}}
           />
           <InputField
             fieldStyle={{ height: "30px" }}
@@ -81,7 +82,7 @@ const Categories = (props) => {
         <button className="update-stylist-detail">Update</button>
       </Modal>
 
-      <TableHeader title="Categories" />
+      <TableHeader title="Categories" style={{width: '850px'}} />
       {categories.map((item) => {
         return <CategoryItem item={item} showModal={updateShowSubModal} />;
       })}

@@ -3,9 +3,9 @@ import { FaTrash } from "react-icons/fa";
 import "../styles/subcategoryItem.css";
 import ProfilePicture from "./ProfilePicture";
 
-const SubCategoryItem = ({ item }) => {
+const SubCategoryItem = ({ item, style }) => {
   return (
-    <div className="subcategory-item">
+    <div className="subcategory-item" style={style} >
       <div className="subdescription-container">
         {/* <div className="subcategory-picture"></div> */}
         <ProfilePicture
