@@ -35,18 +35,14 @@ const NavigationPanel = (props) => {
                       return (
                         <>
                           <div className="active-mark active"></div>
-                          <span style={{ marginLeft: "50px" }}>
-                            {option.name}
-                          </span>
+                          <span>{option.name}</span>
                         </>
                       );
                     } else {
                       return (
                         <>
                           <div className="active-mark inactive"></div>
-                          <span style={{ marginLeft: "50px" }}>
-                            {option.name}
-                          </span>
+                          <span>{option.name}</span>
                         </>
                       );
                     }

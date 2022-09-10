@@ -1,6 +1,7 @@
 import { IoLockClosedOutline, IoPencil } from "react-icons/io5";
 import profileIcon from "../assets/profilePictureIcon.png";
 import "../styles/settings.css";
+import switchImage from "../assets/switchImage.png";
 
 const Settings = (props) => {
   return (
@@ -13,12 +14,12 @@ const Settings = (props) => {
             <input placeholder="Change Password" />
             <IoLockClosedOutline className="icon" />
           </div>
-          <div className="field">
+          <div className="field" style={{borderBottom: 'none'}} >
             <input placeholder="Change Email/Username" />
             <img
               src={profileIcon}
               alt=""
-              style={{ width: "24px", height: "27px" }}
+              style={{ width: "18px", height: "20px" }}
             ></img>
           </div>
         </div>
@@ -28,9 +29,7 @@ const Settings = (props) => {
         <div className="settings-fields-container">
           <div className="field">
             <p>Notifications</p>
-            <div className="switch">
-              <div></div>
-            </div>
+            <img src={switchImage} style={{width: "33px", height: "21px" }} alt=''></img>
           </div>
           <div className="field">
             <p>Change Profile picture</p>

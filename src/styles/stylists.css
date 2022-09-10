@@ -4,14 +4,21 @@
     flex-grow: 100;
     overflow-x: scroll;
     min-height: 400px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */  
+}
+
+.stylists::-webkit-scrollbar {
+    display: none;
 }
 
 .stylists .cards-container {
+    /* border: 1px solid red; */
     width: 85%;
     display: grid;
     row-gap: 28px;
-    column-gap: 18px;
-    grid-template-columns: repeat(8, 1fr);
+    column-gap: 28px;
+    grid-template-columns: repeat(8, 80px);
 }
 
 .stylists .picture-container, .input-fields-container {

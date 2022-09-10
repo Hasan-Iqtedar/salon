@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState } from "react";
 import { GlobalContext } from "../contexts/globalState";
 import { HiLocationMarker } from "react-icons/hi";
 import StylistCard from "../components/StylistCard";
@@ -7,7 +7,6 @@ import InputField from "../components/InputField";
 import Modal from "../components/Modal";
 import ProfilePicture from "../components/ProfilePicture";
 import "../styles/stylists.css";
-
 
 const Stylists = (props) => {
   const { stylists, updateStylist, deleteStylist } = useContext(GlobalContext);
@@ -54,7 +53,7 @@ const Stylists = (props) => {
         </button>
       </Modal>
 
-      <TableHeader title="Stylists" />
+      <TableHeader title="Stylists" style={{ width: "800px", marginBottom: '20px' }} />
       <div className="cards-container">
         {stylists.map((item) => {
           return (

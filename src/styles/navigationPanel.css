@@ -60,6 +60,9 @@
     text-decoration: none;
 }
 
+.options-container ul li .link-active span, .options-container ul li .link span {
+    margin-left: 15px;
+}
 
 
 .navigation-panel .options-container ul li .link:hover {
@@ -92,6 +95,11 @@
         font-size: medium;
         width: 18%;
     }
+
+    .options-container ul li .link-active span, .options-container ul li .link span {
+        margin-left: 20px;
+    }
+
 }
 
 @media (min-height: 900px) {
@@ -108,5 +116,23 @@
 @media (min-height: 900px) {
     .navigation-panel .options-container {
         margin-top: 100px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .options-container ul li .link-active span, .options-container ul li .link span {
+        margin-left: 35px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .options-container ul li .link-active span, .options-container ul li .link span {
+        margin-left: 60px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .options-container ul li .link-active span, .options-container ul li .link span {
+        margin-left: 70px;
     }
 }

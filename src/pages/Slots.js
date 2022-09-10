@@ -1,6 +1,7 @@
 import DropdownMenu from "../components/DropdownMenu";
 import TableHeader from "../components/TableHeader";
 import "../styles/slots.css";
+import removeImage from "../assets/removeImage.png";
 
 const Slots = (props) => {
   const options = [
@@ -18,11 +19,20 @@ const Slots = (props) => {
 
   return (
     <div className="slots">
-      <TableHeader title="Slots Allocation" default={true} />
+      <TableHeader
+        title="Slots Allocation"
+        default={true}
+        style={{ marginBottom: "15px" }}
+      />
       <div className="menus-container">
         <DropdownMenu title="Select Timings">
           {options.map((item) => {
-            return <div key={item.value}>{item.value}</div>;
+            return (
+              <div key={item.value}>
+                {item.value}
+                <img src={removeImage} alt="" style={{ float: "right" }}></img>
+              </div>
+            );
           })}
         </DropdownMenu>
         <DropdownMenu title="Select Stylist">
@@ -31,6 +41,30 @@ const Slots = (props) => {
           })}
         </DropdownMenu>
       </div>
+
+      <div className="center-container">
+        <div className="thing">
+          <span>12:00 PM</span>
+        </div>
+        <div className="thing">
+          <span>12:00 PM</span>
+        </div>
+        <div className="thing">
+          <span>12:00 PM</span>
+        </div>
+      </div>
+      <div className="center-container">
+        <div className="thing">
+          <span>12:00 PM</span>
+        </div>
+        <div className="thing">
+          <span>12:00 PM</span>
+        </div>
+        <div className="thing">
+          <span>12:00 PM</span>
+        </div>
+      </div>
+
     </div>
   );
 };

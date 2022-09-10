@@ -38,7 +38,7 @@
 
 .settings-fields-container .field .icon {
     color: white;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 .settings-fields-container input {
@@ -53,25 +53,12 @@
     outline: none;
 }
 
+.settings-fields-container .field {
+    padding: 10px 5px;
+}
+
 .settings-fields-container .field p {
     color: rgb(131, 129, 129);
     font-weight: 300;
     width: 90%;
-}
-
-.switch {
-    width: 25px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    border-radius: 40%;
-    padding-left: 5px;
-    padding-right: 5px;
-    border: 1px solid white;
-}
-.switch div {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    border: 1px solid white;
 }

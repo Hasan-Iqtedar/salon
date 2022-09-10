@@ -4,7 +4,7 @@ import "../styles/footer.css";
 const Footer = (props) => {
   return (
     <div className="footer">
-      <div>
+      <div style={props.contentStyle} >
         Page 1 of 2 <IoIosArrowBack className="icon inactive" /> 1
         <IoIosArrowForward className="icon active" />
       </div>
