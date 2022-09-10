@@ -3,6 +3,12 @@
     flex-direction: column;
     overflow: scroll;
     /* border: 1px solid blue; */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */  
+}
+
+.categories::-webkit-scrollbar {
+    display: none;
 }
 
 .categories .picture-container {
@@ -26,4 +32,12 @@
 .categories .add-category-btn:hover {
     cursor: default;
     /* background-color: var(--secondaryColor);     */
+}
+
+
+@media (min-width: 1000px) {
+    .categories .update {
+        /* margin: 10px 20px; */
+    }
+    
 }
