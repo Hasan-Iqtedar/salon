@@ -1,4 +1,5 @@
 import "../styles/notifications.css";
+import tick from "../assets/tick.png";
 
 const arr = [
   {
@@ -20,7 +21,14 @@ const Notifications = (props) => {
     <div className="notifications">
       <div id="notifications-header">
         <h2>Notifications</h2>
-        <p>Mark all read</p>
+        <p className="center-container">
+          <img
+            src={tick}
+            style={{ width: "18px", height: "18px", marginRight: "5px" }}
+            alt=""
+          ></img>
+          Mark all read
+        </p>
       </div>
 
       {arr.map((a) => {

@@ -61,7 +61,7 @@ const Categories = (props) => {
       </Modal>
 
       <Modal
-        title="Category Details"
+        title="Adding New Category"
         show={showCatModal}
         hideModal={hideCatModal}
       >
@@ -72,7 +72,7 @@ const Categories = (props) => {
         <div className="input-fields-container">
           <InputField
             fieldStyle={{ height: "30px" }}
-            placeholder="Sub Category name"
+            placeholder="Category Name"
           />
           <InputField
             fieldStyle={{ height: "30px" }}
