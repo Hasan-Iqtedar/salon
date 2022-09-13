@@ -39,3 +39,8 @@ code {
   align-items: center;
   /* border: 1px solid red; */
 }
+
+
+input, button {
+  font-family: 'DM Sans';
+}

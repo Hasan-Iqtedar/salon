@@ -84,6 +84,7 @@
     border: none;
     color: white;
     background-color: transparent;
+    font-family: 'DM Sans';
 }
 
 .navigation-panel .sign-out-container .sign-out:hover {

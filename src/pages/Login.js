@@ -35,41 +35,43 @@ const Login = (props) => {
 
   return (
     <div className="login">
-      <Logo />
-      <Headline text="Back" line="Login to continue using account" />
+      <div>
+        <Logo />
+        <Headline text="Back" line="Login to continue using account" />
 
-      <div className="container">
-        <InputField
-          icon={FaEnvelope}
-          name="email"
-          type="email"
-          placeholder="Email"
-          value={email}
-          changeHandler={updateEmail}
-        />
-        <InputField
-          icon={GoEllipsis}
-          icon2={IoIosEyeOff}
-          name="password"
-          type="password"
-          placeholder="password"
-          value={password}
-          changeHandler={updatePassword}
-          fieldStyle={{ width: "70%" }}
-        />
-        <span className="forgot-password">Forget Pasword?</span>
-      </div>
-      {err ? <p className="error">Invalid Credentials!</p> : ""}
+        <div className="container">
+          <InputField
+            icon={FaEnvelope}
+            name="email"
+            type="email"
+            placeholder="Email"
+            value={email}
+            changeHandler={updateEmail}
+          />
+          <InputField
+            icon={GoEllipsis}
+            icon2={IoIosEyeOff}
+            name="password"
+            type="password"
+            placeholder="password"
+            value={password}
+            changeHandler={updatePassword}
+            fieldStyle={{ width: "70%" }}
+          />
+          <span className="forgot-password">Forget Pasword?</span>
+        </div>
+        {err ? <p className="error">Invalid Credentials!</p> : ""}
 
-      <div className="button-container">
-        <button className="login-button" onClick={loginUser}>
-          Login
-        </button>
-        <button className="create-account">Create Account</button>
+        <div className="button-container">
+          <button className="login-button" onClick={loginUser}>
+            Login
+          </button>
+          <button className="create-account">Create Account</button>
+        </div>
+        <p className="caption">
+          Don't have an account? <span>Create</span>
+        </p>
       </div>
-      <p className="caption">
-        Don't have an account? <span>Create</span>
-      </p>
     </div>
   );
 };

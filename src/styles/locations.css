@@ -30,6 +30,7 @@
     background-color: transparent;
     font-size: 10px;
     font-weight: 400;
+    font-family: 'DM Sans';
 }
 
 .locations .location-header button:hover, .locations .location-item .actions button:hover {
@@ -77,6 +78,7 @@
     text-decoration: underline;
     background-color: transparent;  
     font-size: 10px;  
+    font-family: 'DM Sans';
 }
 
 @media (min-width: 800px) {

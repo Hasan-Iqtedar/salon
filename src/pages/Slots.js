@@ -2,6 +2,7 @@ import DropdownMenu from "../components/DropdownMenu";
 import TableHeader from "../components/TableHeader";
 import "../styles/slots.css";
 import removeImage from "../assets/removeImage.png";
+import addImage from "../assets/addImage.png";
 
 const Slots = (props) => {
   const options = [
@@ -37,7 +38,12 @@ const Slots = (props) => {
         </DropdownMenu>
         <DropdownMenu title="Select Stylist">
           {stylists.map((item) => {
-            return <div key={item.name}>{item.name}</div>;
+            return (
+              <div key={item.name}>
+                {item.name}
+                <img src={addImage} alt="" style={{ float: "right" }}></img>
+              </div>
+            );
           })}
         </DropdownMenu>
       </div>
@@ -64,7 +70,6 @@ const Slots = (props) => {
           <span>12:00 PM</span>
         </div>
       </div>
-
     </div>
   );
 };

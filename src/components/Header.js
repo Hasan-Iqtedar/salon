@@ -21,9 +21,9 @@ const Header = (props) => {
       />
       <div className="header-options">
         <IoIosNotifications
-          className={color ? "icon white" : "icon gold"}
+          className='icon'
           onClick={() => {
-            toggleColor();
+            // toggleColor();
             navigate("/notifications", { replace: true });
           }}
         />
