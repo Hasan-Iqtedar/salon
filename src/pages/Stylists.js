@@ -29,7 +29,12 @@ const Stylists = (props) => {
 
   return (
     <div className="stylists">
-      <Modal title="Details" show={show} hideModal={hideModal}>
+      <Modal
+        title="Details"
+        show={show}
+        hideModal={hideModal}
+        contentStyle={{ height: "350px" }}
+      >
         <div className="picture-container">
           {/* <div className="add-picture"></div> */}
           <ProfilePicture imgStyle={{ width: "45px", height: "45px" }} />
@@ -53,7 +58,10 @@ const Stylists = (props) => {
         </button>
       </Modal>
 
-      <TableHeader title="Stylists" style={{ width: "800px", marginBottom: '20px' }} />
+      <TableHeader
+        title="Stylists"
+        style={{ width: "800px", marginBottom: "20px" }}
+      />
       <div className="cards-container">
         {stylists.map((item) => {
           return (
