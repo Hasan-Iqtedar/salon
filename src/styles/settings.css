@@ -7,15 +7,17 @@
 
 .settings-title {
     color: var(--primaryColor);
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 0;
     padding-bottom: 30px;
+    font-size: 24px;
     border-bottom: 0.5px solid rgba(124, 124, 124, 0.28);
 }
 
 .settings div h3 {
     color: white;
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 24px;
     margin-left: 25px;
     margin-bottom: 0;
     padding-bottom: 30px;
@@ -33,6 +35,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-weight: 400;
+    font-size: 20px;
     border-bottom: 0.5px solid rgba(124, 124, 124, 0.28);
 }
 
@@ -45,8 +49,10 @@
     background-color: transparent;
     border: none;
     height: 50px;
-    color: white;
+    color: #7C7C7C;
     width: 90%;
+    font-weight: 400;
+    font-size: 20px;
 }
 
 .settings-fields-container input:focus-visible {
@@ -58,7 +64,7 @@
 }
 
 .settings-fields-container .field p {
-    color: rgb(131, 129, 129);
-    font-weight: 300;
     width: 90%;
+    color: #7C7C7C;
+
 }

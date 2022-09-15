@@ -75,7 +75,8 @@
 .stylist-card p, .add-card p {
     margin-top: 2px;
     margin-bottom: 2px;
-    font-size: small;
+    font-size: 13px;
+    font-weight: 500;
     color: white;
 }
 

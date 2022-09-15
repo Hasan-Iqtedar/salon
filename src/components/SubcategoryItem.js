@@ -20,7 +20,7 @@ const SubCategoryItem = ({ item, style }) => {
           <span>{item.name}</span>
           <div>
             ${item.price}
-            <div className="circle"></div> Hair Serivce
+            <div className="circle"></div> <div style={{fontSize: '10px', fontWeight: '400'}} >Hair Serivce</div>
           </div>
         </div>
       </div>

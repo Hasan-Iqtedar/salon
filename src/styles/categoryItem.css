@@ -40,6 +40,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin-right: 10px;
     /* align-items: center; */
     /* border: 1px solid red; */
     /* overflow: auto; */
@@ -48,6 +49,7 @@
 .category-item .description-container .description span {
     color: var(--primaryColor);
     font-size: 16px;
+    font-weight: 500;
 }
 
 .category-item .description-container .description div {
@@ -55,7 +57,7 @@
     flex-direction: row;
     align-items: center;
     color: white;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 12px;
 }
 
@@ -80,7 +82,7 @@
     height: fit-content;
     color: white;
     font-size: 10px;
-    font-weight: 300;
+    font-weight: 400;
     display: flex;
     align-items: center;
 }

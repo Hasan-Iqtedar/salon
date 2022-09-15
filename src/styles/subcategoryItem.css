@@ -37,7 +37,8 @@
 
 .subcategory-item .subcategory-description span {
     color: var(--primaryColor);
-    font-size: 13px;
+    font-size: 13px;    
+    font-weight: 500;
 }
 
 .subcategory-item .subcategory-description div {
@@ -46,7 +47,7 @@
     flex-direction: row;
     align-items: center;
     color: white;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 12px;
     /* border: 1px solid red; */
 }

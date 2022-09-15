@@ -51,7 +51,7 @@
     font-size: x-small;
     display: flex;
     color: white;
-    font-weight: 300;
+    font-weight: 400;
     align-items: center;
     /* justify-content: space-between; */
 }
@@ -74,7 +74,7 @@
 .locations .location-item .actions button {
     border: none;
     color: white;
-    font-weight: 300;
+    font-weight: 400;
     text-decoration: underline;
     background-color: transparent;  
     font-size: 10px;  
