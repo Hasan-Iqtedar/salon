@@ -11,20 +11,20 @@ import { GlobalProvider } from "./contexts/globalState";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <AuthProvider>
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/*"
-          element={
-            <RequireAuth>
-              <GlobalProvider>
+    <GlobalProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/*"
+            element={
+              <RequireAuth>
                 <App />
-              </GlobalProvider>
-            </RequireAuth>
-          }
-        />
-        <Route path="/login" element={<Login />} />
-      </Routes>
-    </BrowserRouter>
+              </RequireAuth>
+            }
+          />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
+    </GlobalProvider>
   </AuthProvider>
 );

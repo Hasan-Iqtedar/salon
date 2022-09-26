@@ -1,8 +1,13 @@
-import React, { createContext, useReducer } from "react";
+import React, { createContext, useContext, useEffect, useReducer } from "react";
+import { collection, getDocs, doc, deleteDoc } from "firebase/firestore";
+import { db } from "../firebase";
 import combineReducers from "react-combine-reducers";
 import locationReducer from "./locationReducer";
 import stylistsReducer from "./stylistsReducer";
 import categoriesReducer from "./categoriesReducer";
+import adminReducer from "./adminReducer.js";
+
+const adminData = {};
 
 const initialStateLocations = {
   locations: [
@@ -84,6 +89,7 @@ const initialCategories = {
 export const GlobalContext = createContext();
 
 const [rootReducer, initialState] = combineReducers({
+  adminState: [adminReducer, adminData],
   locationsState: [locationReducer, initialStateLocations],
   stylistsState: [stylistsReducer, initialStateStylists],
   categoriesState: [categoriesReducer, initialCategories],
@@ -93,6 +99,20 @@ export const GlobalProvider = (props) => {
   const [state, dispatch] = useReducer(rootReducer, initialState);
 
   //Actions.
+
+  useEffect(() => {
+    const initializeAdminState = async () => {
+      console.log("Loading...");
+      const data = await getDocs(collection(db, "admin"));
+      console.log("Loaded");
+      dispatch({
+        type: "INITIALIZE_ADMIN_STATE",
+        data: data,
+      });
+    };
+    initializeAdminState();
+  }, []);
+
   const addLocation = (item) => {
     dispatch({
       type: "ADD_LOCATION",
@@ -140,6 +160,7 @@ export const GlobalProvider = (props) => {
   return (
     <GlobalContext.Provider
       value={{
+        adminCredentials: state.adminState.adminData,
         locations: state.locationsState.locations,
         stylists: state.stylistsState.stylists,
         categories: state.categoriesState.categories,
@@ -154,4 +175,8 @@ export const GlobalProvider = (props) => {
       {props.children}
     </GlobalContext.Provider>
   );
+};
+
+export const useGlobalState = () => {
+  return useContext(GlobalContext);
 };

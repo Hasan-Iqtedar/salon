@@ -8,8 +8,10 @@ import Headline from "../components/Headline";
 import InputField from "../components/InputField";
 import Logo from "../components/Logo";
 import "../styles/login.css";
+import { useGlobalState } from "../contexts/globalState";
 
 const Login = (props) => {
+  const { adminCredentials } = useGlobalState();
   const { login } = useAuth();
   const navigate = useNavigate();
 
@@ -21,7 +23,11 @@ const Login = (props) => {
   const updatePassword = (e) => setPassword(e.target.value);
 
   const loginUser = (e) => {
-    if (email === "admin@gmail.com" && password === "admin") {
+    if (
+      adminCredentials &&
+      email === adminCredentials.email &&
+      password === adminCredentials.password
+    ) {
       login("admin");
       localStorage.setItem("user", "admin");
       navigate("/", { replace: true });
@@ -30,8 +36,6 @@ const Login = (props) => {
       setErr(true);
     }
   };
-
-  // const createAccount = (e) => {};
 
   return (
     <div className="login">
