@@ -23,6 +23,7 @@ const Login = (props) => {
   const updatePassword = (e) => setPassword(e.target.value);
 
   const loginUser = (e) => {
+    console.log(adminCredentials);
     if (
       adminCredentials &&
       email === adminCredentials.email &&

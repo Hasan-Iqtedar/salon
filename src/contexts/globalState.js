@@ -5,16 +5,14 @@ import combineReducers from "react-combine-reducers";
 import locationReducer from "./locationReducer";
 import stylistsReducer from "./stylistsReducer";
 import categoriesReducer from "./categoriesReducer";
-import adminReducer from "./adminReducer.js";
+import dataReducer from "./adminReducer.js";
 
-const adminData = {};
+const initialAdminState = {
+  adminData: {},
+};
 
 const initialStateLocations = {
-  locations: [
-    { address: "Street abc, city abc" },
-    { address: "Street abc, city abc" },
-    { address: "Street abc, city abc" },
-  ],
+  locations: [],
 };
 
 const initialStateStylists = {
@@ -89,7 +87,7 @@ const initialCategories = {
 export const GlobalContext = createContext();
 
 const [rootReducer, initialState] = combineReducers({
-  adminState: [adminReducer, adminData],
+  adminState: [dataReducer, initialAdminState],
   locationsState: [locationReducer, initialStateLocations],
   stylistsState: [stylistsReducer, initialStateStylists],
   categoriesState: [categoriesReducer, initialCategories],
@@ -100,17 +98,33 @@ export const GlobalProvider = (props) => {
 
   //Actions.
 
+  // useEffect(() => {
+  //   console.log("____________");
+  //   console.log(state);
+  //   console.log("____________");
+  // }, [state]);
+
   useEffect(() => {
-    const initializeAdminState = async () => {
+    const initializeAdminData = async () => {
       console.log("Loading...");
-      const data = await getDocs(collection(db, "admin"));
+      const adminData = await getDocs(collection(db, "admin"));
       console.log("Loaded");
       dispatch({
-        type: "INITIALIZE_ADMIN_STATE",
-        data: data,
+        type: "INITIALIZE_ADMIN_DATA",
+        data: adminData,
       });
     };
-    initializeAdminState();
+
+    const initializeLocations = async () => {
+      const locationData = await getDocs(collection(db, "location"));
+      dispatch({
+        type: "INITIALIZE_LOCATION_DATA",
+        data: locationData,
+      });
+    };
+
+    initializeAdminData();
+    initializeLocations();
   }, []);
 
   const addLocation = (item) => {

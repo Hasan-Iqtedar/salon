@@ -1,12 +1,13 @@
 const locationReducer = (state, action) => {
   switch (action.type) {
-    case "ADD_LOCATION": {
-      action.newItem.id = state.currentId + 1;
-      const updatedItems = [...state.items, action.newItem];
+    case "INITIALIZE_LOCATION_DATA": {
+      const locations = action.data.docs.map((doc) => ({
+        data: doc.data(),
+        id: doc.id,
+      }));
       return {
         ...state,
-        currentId: state.currentId + 1,
-        items: updatedItems,
+        locations: locations,
       };
     }
 

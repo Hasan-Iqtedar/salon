@@ -4,7 +4,7 @@ import { GlobalContext } from "../contexts/globalState";
 import "../styles/locations.css";
 
 const Locations = (props) => {
-  const { locations, addLocation } = useContext(GlobalContext);
+  const { locations } = useContext(GlobalContext);
 
   return (
     <div className="locations">
@@ -15,10 +15,12 @@ const Locations = (props) => {
 
       {locations.map((item) => {
         return (
-          <div className="location-item">
+          <div className="location-item" key={item.id}>
             <div className="address">
               <HiLocationMarker className="icon" />
-              <p>{item.address}</p>
+              <p>
+                City {item.data.city}, St {item.data.street}
+              </p>
             </div>
             <div className="actions">
               <button>View Bookings</button>
