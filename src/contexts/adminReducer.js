@@ -1,4 +1,4 @@
-const dataReducer = (state, action) => {
+const adminReducer = (state, action) => {
   switch (action.type) {
     case "INITIALIZE_ADMIN_DATA": {
       const admin = action.data.docs[0].data();
@@ -18,4 +18,4 @@ const dataReducer = (state, action) => {
   }
 };
 
-export default dataReducer;
+export default adminReducer;

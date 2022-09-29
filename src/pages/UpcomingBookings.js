@@ -1,10 +1,12 @@
 import Table from "../components/Table";
 import TableHeader from "../components/TableHeader";
 import Footer from "../components/Footer";
-import { upcomingBookings } from "../constants/data";
 import "../styles/upcomingBookings.css";
+import { useGlobalState } from "../contexts/globalState";
 
 const UpcomingBookings = (props) => {
+  const { upcomingBookings } = useGlobalState();
+
   return (
     <div className="upcoming-bookings">
       <TableHeader default={true} title="Upcoming Bookings" />

@@ -64,7 +64,13 @@ export const GlobalProvider = (props) => {
       const locationData = await getDocs(collection(db, "location"));
       const stylistsData = await getDocs(collection(db, "stylist"));
       const categoriesData = await getDocs(collection(db, "category"));
-      // console.log(categoriesData);
+      const pendingBookingsData = await getDocs(
+        collection(db, "pending_bookings")
+      );
+      const upcomingBookingsData = await getDocs(
+        collection(db, "upcoming_bookings")
+      );
+
       dispatch({
         type: "INITIALIZE_LOCATION_DATA",
         data: locationData,
@@ -76,6 +82,14 @@ export const GlobalProvider = (props) => {
       dispatch({
         type: "INITIALIZE_CATEGORIES_DATA",
         data: categoriesData,
+      });
+      dispatch({
+        type: "INITIALIZE_PENDING_BOOKINGS_DATA",
+        data: pendingBookingsData,
+      });
+      dispatch({
+        type: "INITIALIZE_UPCOMING_BOOKINGS_DATA",
+        data: upcomingBookingsData,
       });
     };
 
@@ -134,6 +148,8 @@ export const GlobalProvider = (props) => {
         locations: state.locationsState.locations,
         stylists: state.stylistsState.stylists,
         categories: state.categoriesState.categories,
+        pendingBookings: state.pendingBookingsState.pending_bookings,
+        upcomingBookings: state.upcomingBookingsState.upcoming_bookings,
         addLocation,
         addStylist,
         updateStylist,

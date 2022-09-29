@@ -8,9 +8,9 @@ import "../styles/categoryItem.css";
 import { useEffect } from "react";
 
 const CategoryItem = ({ item, showModal }) => {
-  useEffect(() => {
-    console.log(item.data.subcategories.data.length);
-  }, []);
+  // useEffect(() => {
+  //   console.log(item.data.subcategories.data.length);
+  // }, []);
 
   return (
     <div className="category-item">
@@ -18,7 +18,12 @@ const CategoryItem = ({ item, showModal }) => {
         <div className="description-container">
           {/* <div className="category-picture"></div> */}
           <ProfilePicture
-            imgStyle={{ width: "42px", height: "42px", borderRadius: "6px" }}
+            imgStyle={{
+              width: "42px",
+              height: "42px",
+              borderRadius: "6px",
+              marginRight: "20px",
+            }}
           />
           <div className="description">
             <span>{item.data.name}</span>

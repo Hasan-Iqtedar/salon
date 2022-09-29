@@ -1,6 +1,3 @@
-import { collection, getDoc, doc, deleteDoc } from "firebase/firestore";
-import { db } from "../firebase";
-
 const categoriesReducer = (state, action) => {
   switch (action.type) {
     case "INITIALIZE_CATEGORIES_DATA": {
@@ -8,20 +5,20 @@ const categoriesReducer = (state, action) => {
         data: doc.data(),
         id: doc.id,
       }));
-      console.log(categories[0].data.subcategories.data[0]);
+      // console.log(categories[0].data.subcategories.data[0]);
       return {
         ...state,
         categories: categories,
       };
     }
-    // case "ADD_CATEGORY": {
-    //   action.newItem.id = state.categories[state.categories.length - 1].id + 1;
-    //   const updatedItems = [...state.categories, action.newItem];
-    //   return {
-    //     ...state,
-    //     categories: updatedItems,
-    //   };
-    // }
+
+    case "ADD_CATEGORY": {
+      const updatedItems = [...state.categories, action.newItem];
+      return {
+        ...state,
+        categories: updatedItems,
+      };
+    }
 
     // case "ADD_SUBCATEGORY": {
     //   const categoryIndex = state.categories.findIndex(

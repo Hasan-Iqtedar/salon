@@ -1,10 +1,11 @@
+import { useGlobalState } from "../contexts/globalState";
 import Table from "../components/Table";
 import TableHeader from "../components/TableHeader";
-import { pendingBookings } from "../constants/data";
-import { upcomingBookings } from "../constants/data";
 import "../styles/dashboard.css";
 
 const Dashboard = (props) => {
+  const { pendingBookings, upcomingBookings } = useGlobalState();
+
   return (
     <div className="dashboard">
       <TableHeader title="Pending Approvals" />

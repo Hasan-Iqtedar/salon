@@ -10,7 +10,7 @@ const Table = (props) => {
   return (
     <div className="table">
       <table>
-        <tr style={{backgroundColor: 'transparent'}} >
+        <tr style={{ backgroundColor: "transparent" }}>
           <th>Name</th>
           <th>Service</th>
           <th>Time</th>
@@ -24,14 +24,18 @@ const Table = (props) => {
               <td>
                 <div className="name">
                   <ProfilePicture
-                    imgStyle={{ width: "50px", height: "50px", marginRight: '5px' }}
+                    imgStyle={{
+                      width: "50px",
+                      height: "50px",
+                      marginRight: "15px",
+                    }}
                   />
-                  {item.name}
+                  {item.data.name}
                 </div>
               </td>
-              <td>{item.service}</td>
-              <td>{item.time}</td>
-              <td>{item.stylist}</td>
+              <td>{item.data.service}</td>
+              <td>{item.data.time}</td>
+              <td>{item.data.stylist}</td>
               <td>
                 <button className="accept">Approve</button>
                 <button className="decline">Decline</button>
