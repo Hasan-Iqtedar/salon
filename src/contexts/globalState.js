@@ -48,7 +48,6 @@ export const GlobalProvider = (props) => {
   const [state, dispatch] = useReducer(rootReducer, initialState);
 
   //Actions.
-
   useEffect(() => {
     const initializeAdminData = async () => {
       console.log("Loading...");
