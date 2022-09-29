@@ -1,5 +1,16 @@
 const stylistsReducer = (state, action) => {
   switch (action.type) {
+    case "INITIALIZE_STYLIST_DATA": {
+      const stylists = action.data.docs.map((doc) => ({
+        data: doc.data(),
+        id: doc.id,
+      }));
+      return {
+        ...state,
+        stylists: stylists,
+      };
+    }
+
     case "ADD_STYLIST": {
       action.newItem.id = state.stylists[state.stylists.length - 1].id + 1;
       const updatedItems = [...state.stylists, action.newItem];
@@ -10,13 +21,14 @@ const stylistsReducer = (state, action) => {
     }
 
     case "UPDATE_STYLIST": {
-      console.log(state.stylists);
+      // console.log(state.stylists);
       const itemIndex = state.stylists.findIndex(
         (item) => item.id === action.id
       );
-
+      // console.log(itemIndex);
       const updatedItem = state.stylists[itemIndex];
-      updatedItem.name = action.name;
+      updatedItem.data.name = action.name;
+      updatedItem.data.location = action.location || "";
 
       const updatedItems = state.stylists;
       updatedItems[itemIndex] = updatedItem;

@@ -1,5 +1,13 @@
 import { useContext, useState } from "react";
-import { GlobalContext } from "../contexts/globalState";
+import {
+  collection,
+  getDocs,
+  doc,
+  deleteDoc,
+  updateDoc,
+} from "firebase/firestore";
+import { db } from "../firebase";
+import { useGlobalState } from "../contexts/globalState";
 import { HiLocationMarker } from "react-icons/hi";
 import StylistCard from "../components/StylistCard";
 import TableHeader from "../components/TableHeader";
@@ -9,9 +17,10 @@ import ProfilePicture from "../components/ProfilePicture";
 import "../styles/stylists.css";
 
 const Stylists = (props) => {
-  const { stylists, updateStylist, deleteStylist } = useContext(GlobalContext);
+  const { stylists, updateStylist, deleteStylist } = useGlobalState();
   const [show, setShow] = useState(false);
   const [name, setName] = useState("");
+  const [location, setLocation] = useState("");
   const [stylistId, setStylistId] = useState(null);
 
   const showModal = (id) => {
@@ -21,10 +30,30 @@ const Stylists = (props) => {
   const hideModal = () => setShow(false);
   const updateName = (e) => setName(e.target.value);
 
-  const updateStylistData = () => {
-    console.log(stylistId, name);
-    updateStylist(stylistId, name);
+  const updateStylistData = async () => {
+    const ref = doc(db, "stylist", stylistId);
+    try {
+      await updateDoc(ref, {
+        name: name,
+        location: location,
+      });
+      hideModal(false);
+      updateStylist(stylistId, name);
+    } catch (err) {
+      console.log(err);
+    }
+
     hideModal();
+  };
+
+  const deleteStylistData = async (id) => {
+    const ref = doc(db, "stylist", id);
+    try {
+      await deleteDoc(ref);
+      deleteStylist(id);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -51,6 +80,8 @@ const Stylists = (props) => {
             icon={HiLocationMarker}
             fieldStyle={{ height: "30px" }}
             placeholder="Select Location"
+            value={location}
+            changeHandler={(e) => setLocation(e.target.value)}
           />
         </div>
         <button className="update-stylist-detail" onClick={updateStylistData}>
@@ -67,10 +98,11 @@ const Stylists = (props) => {
           return (
             <StylistCard
               key={item.id}
-              item={item}
-              showModal={showModal}
+              item={item.data}
+              id={item.id}
+              showModal={showModal.bind(this, item.id)}
               hideModal={hideModal}
-              deleteStylist={deleteStylist}
+              deleteStylist={deleteStylistData.bind(this, item.id)}
             />
           );
         })}

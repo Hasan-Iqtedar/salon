@@ -1,5 +1,5 @@
-import { useContext, useState } from "react";
-import { GlobalContext } from "../contexts/globalState";
+import { useContext, useEffect, useState } from "react";
+import { GlobalContext, useGlobalState } from "../contexts/globalState";
 import { AiFillCaretDown } from "react-icons/ai";
 import Modal from "../components/Modal";
 import CategoryItem from "../components/CategoryItem";
@@ -9,7 +9,7 @@ import InputField from "../components/InputField";
 import "../styles/categories.css";
 
 const Categories = (props) => {
-  const { categories } = useContext(GlobalContext);
+  const { categories } = useGlobalState();
   const [showSubModal, setShowSubModal] = useState(false);
   const [showCatModal, setShowCatModal] = useState(false);
   const [name, setName] = useState("");

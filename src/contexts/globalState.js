@@ -16,72 +16,59 @@ const initialStateLocations = {
 };
 
 const initialStateStylists = {
-  stylists: [
-    { id: "1", picture: "", name: "David", rating: "5" },
-    { id: "2", picture: "", name: "John", rating: "4" },
-    { id: "3", picture: "", name: "Joe", rating: "5" },
-    { id: "4", picture: "", name: "David", rating: "5" },
-    { id: "5", picture: "", name: "John", rating: "4" },
-    { id: "6", picture: "", name: "Joe", rating: "5" },
-    { id: "7", picture: "", name: "David", rating: "5" },
-    { id: "8", picture: "", name: "John", rating: "4" },
-    { id: "9", picture: "", name: "Joe", rating: "5" },
-    { id: "10", picture: "", name: "David", rating: "5" },
-    { id: "11", picture: "", name: "John", rating: "4" },
-    { id: "12", picture: "", name: "Joe", rating: "5" },
-  ],
+  stylists: [],
 };
 
 const initialCategories = {
-  categories: [
-    {
-      id: 1,
-      name: "Braided",
-      type: "Hair Service",
-      subcategories: [
-        {
-          id: 1,
-          price: "50",
-          name: "Bob",
-        },
-        {
-          id: 2,
-          price: "50",
-          name: "Twist Braid - Medium",
-        },
-      ],
-    },
-    {
-      id: 2,
-      name: "Conrows",
-      type: "Hair Service",
-      subcategories: [
-        {
-          price: "50",
-          name: "1 Pony no extension",
-        },
-        {
-          price: "50",
-          name: "2 Ponies add extension",
-        },
-      ],
-    },
-    {
-      id: 2,
-      name: "Conrows",
-      type: "Hair Service",
-      subcategories: [
-        {
-          price: "50",
-          name: "1 Pony no extension",
-        },
-        {
-          price: "50",
-          name: "2 Ponies add extension",
-        },
-      ],
-    },
-  ],
+  categories: [],
+  //   {
+  //     id: 1,
+  //     name: "Braided",
+  //     type: "Hair Service",
+  //     subcategories: [
+  //       {
+  //         id: 1,
+  //         price: "50",
+  //         name: "Bob",
+  //       },
+  //       {
+  //         id: 2,
+  //         price: "50",
+  //         name: "Twist Braid - Medium",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Conrows",
+  //     type: "Hair Service",
+  //     subcategories: [
+  //       {
+  //         price: "50",
+  //         name: "1 Pony no extension",
+  //       },
+  //       {
+  //         price: "50",
+  //         name: "2 Ponies add extension",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Conrows",
+  //     type: "Hair Service",
+  //     subcategories: [
+  //       {
+  //         price: "50",
+  //         name: "1 Pony no extension",
+  //       },
+  //       {
+  //         price: "50",
+  //         name: "2 Ponies add extension",
+  //       },
+  //     ],
+  //   },
+  // ],
 };
 
 export const GlobalContext = createContext();
@@ -98,12 +85,6 @@ export const GlobalProvider = (props) => {
 
   //Actions.
 
-  // useEffect(() => {
-  //   console.log("____________");
-  //   console.log(state);
-  //   console.log("____________");
-  // }, [state]);
-
   useEffect(() => {
     const initializeAdminData = async () => {
       console.log("Loading...");
@@ -117,9 +98,20 @@ export const GlobalProvider = (props) => {
 
     const initializeLocations = async () => {
       const locationData = await getDocs(collection(db, "location"));
+      const stylistsData = await getDocs(collection(db, "stylist"));
+      const categoriesData = await getDocs(collection(db, "category"));
+      // console.log(categoriesData);
       dispatch({
         type: "INITIALIZE_LOCATION_DATA",
         data: locationData,
+      });
+      dispatch({
+        type: "INITIALIZE_STYLIST_DATA",
+        data: stylistsData,
+      });
+      dispatch({
+        type: "INITIALIZE_CATEGORIES_DATA",
+        data: categoriesData,
       });
     };
 

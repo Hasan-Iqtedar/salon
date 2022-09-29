@@ -5,8 +5,13 @@ import { FaTrash } from "react-icons/fa";
 import SubCategoryItem from "./SubcategoryItem";
 import ProfilePicture from "../components/ProfilePicture";
 import "../styles/categoryItem.css";
+import { useEffect } from "react";
 
 const CategoryItem = ({ item, showModal }) => {
+  useEffect(() => {
+    console.log(item.data.subcategories.data.length);
+  }, []);
+
   return (
     <div className="category-item">
       <div className="category">
@@ -16,9 +21,9 @@ const CategoryItem = ({ item, showModal }) => {
             imgStyle={{ width: "42px", height: "42px", borderRadius: "6px" }}
           />
           <div className="description">
-            <span>{item.name}</span>
+            <span>{item.data.name}</span>
             <div>
-              <div className="circle"></div> {item.type}
+              <div className="circle"></div> {item.data.type}
             </div>
           </div>
         </div>
@@ -36,9 +41,11 @@ const CategoryItem = ({ item, showModal }) => {
         </div>
       </div>
 
-      {item.subcategories.map((cat, index) => {
-        if (index === item.subcategories.length - 1) {
-          return <SubCategoryItem item={cat} style={{ borderBottom: 'none' }} />;
+      {item.data.subcategories.data.map((cat, index) => {
+        if (index === item.data.subcategories.data.length - 1) {
+          return (
+            <SubCategoryItem item={cat} style={{ borderBottom: "none" }} />
+          );
         } else {
           return <SubCategoryItem item={cat} />;
         }
