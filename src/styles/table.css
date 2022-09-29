@@ -51,9 +51,9 @@
 }
 
 .table table td .name {
-    width: 145px;
+    /* width: 145px; */
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     color: var(--primaryColor);
     /* border: 1px solid red; */

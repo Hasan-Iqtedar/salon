@@ -19,10 +19,10 @@
 
 .category-item .description-container {
     height: 70px;
-    width: 150px;
+    /* width: 150px; */
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     /* border: 1px solid white; */
 }
