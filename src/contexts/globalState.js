@@ -5,7 +5,9 @@ import combineReducers from "react-combine-reducers";
 import locationReducer from "./locationReducer";
 import stylistsReducer from "./stylistsReducer";
 import categoriesReducer from "./categoriesReducer";
-import dataReducer from "./adminReducer.js";
+import adminReducer from "./adminReducer";
+import pendingBookingsReducer from "./pendingBookingsReducer";
+import upcomingBookingsReducer from "./upcomingBookingsReducer";
 
 const initialAdminState = {
   adminData: {},
@@ -21,63 +23,25 @@ const initialStateStylists = {
 
 const initialCategories = {
   categories: [],
-  //   {
-  //     id: 1,
-  //     name: "Braided",
-  //     type: "Hair Service",
-  //     subcategories: [
-  //       {
-  //         id: 1,
-  //         price: "50",
-  //         name: "Bob",
-  //       },
-  //       {
-  //         id: 2,
-  //         price: "50",
-  //         name: "Twist Braid - Medium",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     id: 2,
-  //     name: "Conrows",
-  //     type: "Hair Service",
-  //     subcategories: [
-  //       {
-  //         price: "50",
-  //         name: "1 Pony no extension",
-  //       },
-  //       {
-  //         price: "50",
-  //         name: "2 Ponies add extension",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     id: 2,
-  //     name: "Conrows",
-  //     type: "Hair Service",
-  //     subcategories: [
-  //       {
-  //         price: "50",
-  //         name: "1 Pony no extension",
-  //       },
-  //       {
-  //         price: "50",
-  //         name: "2 Ponies add extension",
-  //       },
-  //     ],
-  //   },
-  // ],
+};
+
+const initialStatePendingBooking = {
+  pending_bookings: [],
+};
+
+const initialStateUpcomingBooking = {
+  upcoming_bookings: [],
 };
 
 export const GlobalContext = createContext();
 
 const [rootReducer, initialState] = combineReducers({
-  adminState: [dataReducer, initialAdminState],
+  adminState: [adminReducer, initialAdminState],
   locationsState: [locationReducer, initialStateLocations],
   stylistsState: [stylistsReducer, initialStateStylists],
   categoriesState: [categoriesReducer, initialCategories],
+  pendingBookingsState: [pendingBookingsReducer, initialStatePendingBooking],
+  upcomingBookingsState: [upcomingBookingsReducer, initialStateUpcomingBooking],
 });
 
 export const GlobalProvider = (props) => {
@@ -96,7 +60,7 @@ export const GlobalProvider = (props) => {
       });
     };
 
-    const initializeLocations = async () => {
+    const initializeData = async () => {
       const locationData = await getDocs(collection(db, "location"));
       const stylistsData = await getDocs(collection(db, "stylist"));
       const categoriesData = await getDocs(collection(db, "category"));
@@ -116,7 +80,7 @@ export const GlobalProvider = (props) => {
     };
 
     initializeAdminData();
-    initializeLocations();
+    initializeData();
   }, []);
 
   const addLocation = (item) => {
